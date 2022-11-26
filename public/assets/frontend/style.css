@@ -115,7 +115,6 @@
     border-top-left-radius: 0;
     border-top-right-radius: 0;
     display: block;
-    font-family: "Ubuntu",sans-serif;
     /* height: 60px; */
     margin-left: 20px;
     overflow: hidden;
@@ -171,7 +170,6 @@
   padding: 17px 15px 14px;
 }
 .event-single-content h5 {
-    font-family: 'Outfit';
     font-style: normal;
     font-weight: 500;
     font-size: 32px;
@@ -261,7 +259,6 @@
    -webkit-box-orient: vertical;
 }
 .res-h2{
-    font-family: 'Outfit';
     font-style: normal;
     font-weight: 600;
     font-size: 64px;
@@ -448,7 +445,6 @@
     font-size: 0.75rem;
     line-height: 1.5;
     font-weight: 700;
-    font-family: "Lora", sans-serif;
 }
 .c-timeline__line {
     left: -35px;
@@ -500,6 +496,7 @@
     font-weight: 500;
     font-size: 20px;
     margin: 15px;
+    font-family: 'Montserrat', sans-serif;
 }
 .edu-news-area .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
     color: #fff;
@@ -541,7 +538,6 @@
     margin-top: 8px;
 }
 .contact_text a{
-    font-family: 'Outfit';
     font-style: normal;
     font-weight: 400;
     font-size: 22px;
@@ -565,7 +561,6 @@
     color: #fff;
 }
 .msg_car label{
-    font-family: 'Outfit';
     font-style: normal;
     font-weight: 400;
     font-size: 22px;

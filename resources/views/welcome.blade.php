@@ -336,11 +336,9 @@
                                     <div class="col-md-4">
                                         <div class="card">
                                             <div class="embed-responsive embed-responsive-16by9">
-                                                <video width="400" controls>
-                                                    <source src="{{ $video->link }}" type="video/mp4">
-                                                    Your browser does not support HTML video.
-                                                  </video>
-                                                {{-- <iframe class="embed-responsive-item" src="{{ $video->link }}" allowfullscreen></iframe> --}}
+                                                <iframe width="425" height="315"
+                                                    src="{{ $video->link }}">
+                                                </iframe>
                                             </div>
                                         </div>
                                     </div>
@@ -416,7 +414,7 @@
         <section class="edu-news-area ptb-110">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-4">
+                    <div class="col-md-5">
                         <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
                             @foreach($seminars as $key => $seminar)
                             @if($key == 0)
@@ -440,18 +438,18 @@
                             @endforeach
                         </div>
                     </div>
-                    <div class="col-md-8">
+                    <div class="col-md-7">
                         <div class="tab-content" id="v-pills-tabContent">
                             @foreach($seminars as $key => $seminar)
                             @if($key == 0)
                             <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab" tabindex="0">
                                 <div class="row">
-                                    <div class="col-md-6">
+                                    <div class="col-md-7">
                                         <div class="seminar_img">
                                             <img src="{{ asset($seminar->photo) }}" alt="">
                                         </div>
                                     </div>
-                                    <div class="col-md-6">
+                                    <div class="col-md-5">
                                         <div class="seminar_des pt-5">
                                             <p>
                                                 {{ $seminar->description }}
@@ -464,12 +462,12 @@
                             @if($key != 0)
                             <div class="tab-pane fade" id="v-pills-{{ $seminar->id }}" role="tabpanel" aria-labelledby="v-pills-{{ $seminar->id }}-tab" tabindex="0">
                                 <div class="row">
-                                    <div class="col-md-6">
+                                    <div class="col-md-7">
                                         <div class="seminar_img">
                                             <img src="{{ asset($seminar->photo) }}" alt="">
                                         </div>
                                     </div>
-                                    <div class="col-md-6">
+                                    <div class="col-md-5">
                                         <div class="seminar_des pt-5">
                                             <p>
                                                 {{ $seminar->description }}
