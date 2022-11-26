@@ -1,0 +1,203 @@
+
+
+/* Normal desktop :992px. */
+@media (min-width: 992px) and (max-width: 1200px) {
+.slide-content {margin-bottom: 260px;margin-top: 260px;}
+.department-text h4 {font-size: 18px;}
+.event-single-content h5 {font-size: 16px;}
+.address-area.address,.address-area.post {padding-left: 0;}
+.tag-list ul li:nth-child(3) a {margin-right: 7px;}
+.contact-address {padding: 100px 48px;}
+.professor-slider .slider-item {
+  height: 650px;
+  display: flex;
+  align-items: center;
+}
+.professor-slider .slide-content {
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+}
+
+
+/* Tablet desktop :768px. */
+@media (min-width: 768px) and (max-width: 991px) {
+.slide-content p {padding-left: 40px;padding-right: 40px;}
+.main-menu nav ul li a {padding: 40px 12px;}
+.choose-single.text-center {margin-bottom: 30px;padding: 0 25px;}
+.choose-us-area {padding-bottom: 80px;}
+.department-text h4 {font-size: 18px;}
+.events-tab-top {margin-bottom: 35px;}
+.event-bottom .events-tab-top {margin-bottom: 0;}
+.event-single-tab {margin-top: 40px;}
+.event-single-tab ul li {width: 100%;}
+.tab-img img {width: 100%;}
+.funfact-count h5 {font-size: 16px;}
+.teacher-single {margin-bottom: 50px;}
+.expert-teacher-area {padding-bottom: 60px;}
+.gallery ul.gallery-menu {margin-top: 0;margin-bottom: 30px;}
+.search-news {margin-top: 50px;}
+.tag-list ul li:nth-child(3) a {margin-right: 7px;}
+.newsdetails-area {padding-bottom: 90px;}
+.event-bottom .tab-image-main {margin-top: 50px;}
+.events-details-area .category-list {margin-top: 50px;}
+.contact-us-area .col-md-4 {padding-right: 15px;}
+.contact-us-area .col-md-8 {padding-left: 15px;}
+.sticky {position: inherit;}
+.res-mt-50{margin-top:40px}
+ul.gallery-menu li{margin-left: 0;}
+.professor-about .title {
+  font-size: 32px;
+}
+.professor-slider .slider-item {
+  height: 500px;
+  display: flex;
+  align-items: center;
+}
+.professor-slider .slide-content {
+  max-width: 450px;
+}
+.professor-slider .slide-content .subtitle {
+  font-size: 16px;
+  line-height: 23px;
+  letter-spacing: 0.1em;
+}
+.professor-slider .slide-content h1{
+  font-size: 34px;
+  line-height: 34px;
+}
+.funfact-single {margin-bottom: 40px;text-align: center;}
+.funfact-img {
+  float: none;
+  margin-right: 0;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+
+
+
+
+}
+
+
+/* small mobile :320px. */
+@media (max-width: 767px) {
+.mobile-menu-area {display: flex;margin-bottom: 40px;}
+.main-menu {display: none;}
+.header-left {margin-bottom: 10px;text-align: center;}
+.header-right {float: none;text-align: center;}
+.slide-content {margin-bottom: 150px;margin-top: 150px;}
+.slide-content h1 {font-size: 44px;}
+.slide-content p {padding-left: 0;padding-right: 0;}
+.slider-item {background-position: center center;background-size: cover;}
+.choose-single.text-center {margin-bottom: 30px;padding: 0 25px;}
+.choose-us-area {padding-bottom: 80px;}
+.titel-text h2 {font-size: 28px;line-height: 34px;}
+.events-tab-top .nav-tabs .nav-link {margin-left: -7px;}
+.events-tab-top {margin-bottom: 35px;}
+.tab-image-left {margin-bottom: 0;margin-left: 0;}
+.tab-image-btn a {display: none;}
+.event-single-tab {margin-top: 40px;}
+.funfact-area{padding-bottom:80px;}
+.funfact-single {margin-bottom: 40px;text-align: center;}
+.funfact-img {
+  float: none;
+  margin-right: 0;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+.teacher-single {margin-bottom: 50px;}
+.expert-teacher-area {padding-bottom: 60px;}
+.testimonial-image {float: none;}
+.testimonial-area .owl-carousel .owl-item img {
+  display: block;
+  margin: 0 auto 20px;
+  width: auto;
+}
+.gallery ul.gallery-menu {margin-top: 0;margin-bottom: 30px;}
+ul.gallery-menu li {padding: 8px 12px;margin-left:0;}
+.gallery-box .grid-item {width: 100%;}
+.subcribe-content h3 {font-size: 22px;line-height: 30px;}
+.subcribe-content h4 {display:none;}
+.subcribe-content ul li a {margin-right: 13px;padding: 10px 15px;}
+.edu-news-single {margin-bottom: 40px;}
+.edu-news-area {padding-bottom: 70px;}
+.address-area {margin-bottom: 30px;}
+.footer-top {padding-bottom: 50px;}
+.address-area.address {padding-left: 0;}
+.about-content-left {margin-bottom: 50px;}
+.pagination > li:first-child > a, .pagination > li:first-child > span {
+  margin-right: 40px;
+}
+.pagination > li:last-child > a, .pagination > li:last-child > span {
+  margin-left: 40px !important;
+}
+.search-news {margin-top: 50px;}
+.newsdetails-area {padding-bottom: 90px;}
+.comment-pic {float: none;margin-bottom: 20px;}
+.comment-single-box.two {margin-left: 40px;}
+.tag-list ul li:nth-child(3) a { margin-right: 7px;}
+.event-bottom .tab-image-main {margin-top: 50px;}
+.event-schedule ul li {
+  float: none;
+  width: 100%;
+  margin-bottom: 15px;
+}
+.servdetls-img h5 {font-size: 16px;line-height: 24px;}
+.event-participant .owl-theme .owl-nav {margin-top: 10px;display: none;}
+.events-details-area .category-list {margin-top: 25px;}
+.participant-details h5 {font-size: 14px;}
+.participant-details span {font-size: 13px;}
+.contact-us-area .col-md-4 {padding-right: 15px;}
+.contact-us-area .col-md-8 {padding-left: 15px;}
+.contact-address {padding: 80px 35px;}
+.contact-address-from {padding: 58px 35px;}
+.error-main h2 {line-height: 45px;}
+.sticky {position: inherit;}
+.res-mt-50{margin-top:40px}
+
+.events-tab-top .nav{
+  justify-content: flex-start;
+}
+.professor-slider .slider-item {
+  height: 500px;
+  display: flex;
+  align-items: center;
+}
+.professor-slider .slide-content {
+  text-align: left;
+  max-width: 470px;
+  margin-left: 0;
+  margin-right: auto;
+}
+.professor-slider .slide-content .subtitle {
+  font-size: 18px;
+  line-height: 23px;
+  letter-spacing: 0.1em;
+}
+.professor-slider .slide-content h1{
+  font-size: 34px;
+  line-height: 34px;
+}
+.professor-about .about-image {
+  margin-top: 40px;
+}
+
+}
+
+/* Large Mobile :480px. */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+.container {width:450px}
+.gallery-box .grid-item {width: 50%;}
+.slide-content h1 {font-size: 42px;}
+.logo-area {text-align: center;}
+.edu-news-img > img {width: 100%;}
+
+}
+/* Large Mobile :480px. */
+@media only screen and (max-width: 479px){
+  .container {width:100%}
+}
+

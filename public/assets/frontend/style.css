@@ -1,0 +1,1258 @@
+/*============================================
+
+    CSS INDEX
+    ===================
+
+    01. Theme default CSS
+	02. Section Titel
+	03. Choose Us
+	04. Section Titel Css
+	05. Upcoming Event
+	06. Funfact Area
+	07. Teacher Area
+	08. Testimonial Area
+	09. Photo Gallery
+	10. Subscribe Section
+	11. Education News
+	12. Footer Css
+	13. Breadcamp Area
+	14. About Us Page
+	15. News Page
+	16. News Details Page
+	17. Events Details Page
+	18. Contact Us Page
+	19. 404 Error
+	20. ScrollUp
+
+===========================================================*/
+
+/* ============= 01. Theme default CSS ============= */
+@import url('../../css');
+
+/* ============= 02. Section Titel ============= */
+/* Section Left */
+.titel-text h2 ,.titel-text p{margin: 0;}
+.section-serial {
+  color: #e1e1e1;
+  float: left;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 60px;
+  padding-right: 15px;
+}
+.titel-text {
+  display: block;
+  overflow: hidden;
+  padding-left: 18px;
+  position: relative;
+}
+.titel-text::after {
+  background: #e1e1e1 none repeat scroll 0 0;
+  content: "";
+  height: 77%;
+  left: 0px;
+  position: absolute;
+  top: 8px;
+  width: 1px;
+}
+/* Section Right */
+.right .titel-text {padding-left: 0;padding-right: 18px;}
+.right .titel-text::after {right: 0;left:auto;}
+.right .section-serial {
+  float: right;
+  padding-left: 15px;
+  padding-right: 0;
+}
+
+/* ============= 03. Choose Us ============= */
+.choose-text h4 {
+  font-weight: 500;
+  margin: 13px 0 10px;
+  text-transform: uppercase;
+}
+.choose-text > p {margin: 0;}
+
+/* ============= 04. Section Titel Css ============= */
+.department-single {background: #46dae2 none repeat scroll 0 0;padding: 40px 15px;}
+.department-single.two{background: #5950f7 none repeat scroll 0 0;}
+.department-single.three{background: #f7509b none repeat scroll 0 0;}
+.department-single.four{background: #509bf7 none repeat scroll 0 0;}
+.department-single.five{background: #A30F44 none repeat scroll 0 0;}
+.department-text h4 {
+  font-weight: 500;
+  margin: 13px 0 10px;
+  text-transform: uppercase;
+  color:#fff;
+}
+.department-text p {margin: 0;color:#fff;}
+.our-department-area .owl-theme .owl-nav {margin-top: 60px;}
+.our-department-area .owl-carousel .owl-item img {display: inline-block;width: auto;}
+.our-department-area .owl-theme .owl-nav [class*="owl-"] {
+  background: transparent;
+  border-radius: 0;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 18px;
+  margin: 0;
+  padding: 5px 18px;
+}
+.our-department-area .owl-carousel .owl-nav .owl-next  {background: #5950f7;}
+.our-department-area .owl-carousel .owl-nav .owl-prev {background: #f75950;}
+.our-department-area .owl-theme .owl-nav [class*="owl-"]:hover {background: #555 none repeat scroll 0 0;}
+
+/* ============= 05. Upcoming Event ============= */
+.events-tab-top ul li a.active,
+.events-tab-top ul li a:hover {
+  background: #F48C06 none repeat scroll 0 0 !important;
+  color: #fff !important;
+}
+.events-tab-top .nav-tabs .nav-link {
+    margin-bottom: 0;
+    background: #F6F6F6 none repeat scroll 0 0;
+    color: #000;
+    border: 0px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    display: block;
+    font-family: "Ubuntu",sans-serif;
+    /* height: 60px; */
+    margin-left: 20px;
+    overflow: hidden;
+    text-align: center;
+    /* width: 70px; */
+    transition:.4s;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    text-transform: capitalize;
+}
+.events-tab-top .nav {
+  border-bottom: 0px;
+  justify-content: center;
+}
+.event-date {
+  font-size: 18px;
+  font-weight: 500;
+}
+.event-month {
+  font-weight: 300;
+}
+.event-single-tab ul li {
+  margin-bottom: 17px;
+}
+.event-single-tab ul li:last-child{
+  margin:0;
+}
+.event-single-tab .nav-tabs .nav-link{
+  padding: 0px;
+  border-radius: 0px;
+  border: 0px;
+  color: inherit;
+}
+.eventtab-single-content {background: #f1f1f1 none repeat scroll 0 0;}
+.event-single-date {
+  margin-left: 20px;
+  margin-right: 12px;
+  margin-top: 22px;
+  text-align: center;
+  transition: all 0.3s ease 0s;
+}
+.event-post-no {
+  display: block;
+  font-size: 24px;
+  font-weight: 500;
+}
+.evnet-post-time {font-size: 18px;}
+.event-single-content {
+  border-left: 2px solid #fff;
+  display: block;
+  overflow: hidden;
+  padding: 17px 15px 14px;
+}
+.event-single-content h5 {
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 48px;
+  margin: 0 0 7px;
+  text-transform: capitalize;
+  transition: all 0.3s ease 0s;
+}
+.event-single-content > p {font-weight: 500;margin: 0;}
+.event-single-tab ul li a:hover .event-single-content h5{
+  color:#f48c06;
+}
+.event-single-tab ul li a.active ,
+.event-single-tab ul li a.active .event-single-content h5{
+  color:#f48c06;
+}
+
+.tab-image {float: left;}
+.tab-image-left {margin-bottom: 20px;margin-left: 20px;}
+.tab-person-details {
+  float: right;
+  font-size: 18px;
+  margin-left: 20px;
+  margin-top: 29px;
+  position: relative;
+}
+.tab-person-details::after {
+  background: #fff none repeat scroll 0 0;
+  content: "";
+  height: 2px;
+  left: 0;
+  position: absolute;
+  top: -10px;
+  width: 30px;
+}
+.tab-person-details > h5 {
+  color: #fff;
+  font-weight: 500;
+  margin: 0 0 2px;
+}
+.tab-person-details > span {color: #fff;font-size: 16px;}
+.tab-image-btn a {
+  background: #fff none repeat scroll 0 0;
+  border-radius: 5px;
+  display: block;
+  font-weight: 500;
+  margin-right: 20px;
+  margin-top: 37px;
+  padding: 10px 18px;
+  text-transform: uppercase;
+  transition:.4s;
+}
+.tab-image-btn a i {margin-left: 5px;}
+.tab-image-main {position: relative;}
+.tab-image-info {
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}
+
+/* ============= 06. Research Area ============= */
+.rese-bg-image img{
+    width: 443px;
+    height: 440px;
+}
+.rese-bg-image h4{
+    color: #fff;
+    overflow: hidden;
+   text-overflow: ellipsis;
+   display: -webkit-box;
+   -webkit-line-clamp: 1; /* number of lines to show */
+           line-clamp: 1;
+   -webkit-box-orient: vertical;
+}
+.mask{
+    padding: 0 25px;
+}
+.rese-bg-image p{
+    color: #fff;
+    overflow: hidden;
+   text-overflow: ellipsis;
+   display: -webkit-box;
+   -webkit-line-clamp: 2; /* number of lines to show */
+           line-clamp: 2;
+   -webkit-box-orient: vertical;
+}
+.res-h2{
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 64px;
+    line-height: 81px;
+    /* identical to box height */
+    color: #F48C06;
+    text-align: center;
+    text-transform: capitalize;
+}
+.res-span{
+    color: #000;
+}
+.rese-row{
+    --bs-gutter-x: -11.5rem;
+}
+.modal-content{
+    margin-top: 80px;
+}
+.modal-dialog {
+    max-width: 70%;
+}
+.modal-body p{
+    color: #000;
+}
+
+.upcoming-event{
+    padding-top: 100px;
+    padding-bottom: 40px;
+}
+.upcom-tab-content{
+    padding: 85px 0;
+}
+.upcoming-event-section{
+    background-color: #FFF1DF;;
+}
+/* ============= 07. Teacher Area ============= */
+.teacher-single {
+  box-shadow: 1px 0 8px -1px #ddd;
+  position: relative;
+  text-align: center;
+}
+.teacher-single img{width: 100%;height: auto;}
+.teacher-single .teacher-content {
+  background: #f9f9f9 none repeat scroll 0 0;
+  bottom: 0;
+  box-shadow: 0 15px 25px 0 rgba(3, 7, 15, 0.1);
+  height: auto;
+  padding: 15px 0;
+  position: absolute;
+  right: 0;
+  transform: translateY(60px);
+  transition: all 0.5s ease 0s;
+  width: 100%;
+}
+.inner-div {
+  overflow: hidden;
+  position: relative;
+}
+.teacher-single:hover .teacher-content{transform: translateY(0);}
+.teacher-single:hover .teacher-content {background: #f9f9f9 none repeat scroll 0 0;}
+.teacher-single .title{
+  font-size: 18px;
+  font-weight: 500;
+  color: #555;
+  text-transform: capitalize;
+  margin: 0;
+  transition: all 0.5s ease 0s;
+}
+.teacher-single:hover .title{margin-bottom: 5px;}
+.teacher-single .post {
+  color: #555555;
+  display: block;
+  font-size: 18px;
+  margin-bottom: 24px;
+  text-transform: capitalize;
+  transition: all 0.5s ease 0s;
+}
+.teacher-single:hover .post{margin-bottom:6px}
+.teacher-single:hover .post{
+  height: 30px;
+  opacity: 1;
+  transform: scale(1);
+}
+.teacher-single .social {
+  bottom: 0;
+  left: 0;
+  list-style: outside none none;
+  margin: 0;
+  padding: 0;
+  transition: all 0.5s ease 0s;
+  width: 100%;
+}
+.teacher-single .social li a {
+  border: 1px solid #555;
+  border-radius: 50%;
+  color: #555;
+  display: block;
+  font-size: 14px;
+  font-weight: 700;
+  height: 30px;
+  line-height: 29px;
+  margin-right: 10px;
+  transition: all 0.5s ease 0s;
+  width: 30px;
+}
+.main-menu ul li ul > li > a i {margin-right: 10px;}
+.teacher-single .social li a:hover{
+  color: #fff;
+  background: transparent;
+  border: 1px solid #5950f7;
+  background: #5950f7;
+}
+
+/* ============= 08. Testimonial Area ============= */
+.testimonial-person-details {
+  display: block;
+  overflow: hidden;
+  padding-left: 30px;
+}
+.persn-info {
+  display: block;
+  margin-left: 50px;
+  position: relative;
+}
+.persn-info::after {
+  background: #fff none repeat scroll 0 0;
+  content: "";
+  height: 2px;
+  left: -50px;
+  position: absolute;
+  top: 5px;
+  width: 30px;
+}
+.persn-info > h5 {
+  color: #fff;
+  font-weight: 500;
+  margin: 0 0 2px;
+  position:relative;
+  display:block;
+}
+.testimonial-person-details p,.persn-info span {color: #fff;}
+.testimonial-person-details p {margin: -7px 0 5px;}
+.testimonial-area .owl-theme .owl-nav.disabled + .owl-dots {margin-top: 26px;}
+.testimonial-area .owl-theme .owl-dots .owl-dot.active span {
+  background: #5950f7 none repeat scroll 0 0;
+  color:#5950f7;
+  width: 30px;
+}
+.testimonial-area .owl-theme .owl-dots .owl-dot:hover span {
+  background: #5950f7 none repeat scroll 0 0;
+  color:#5950f7;
+}
+.testimonial-area .owl-theme .owl-dots .owl-dot span {
+  backface-visibility: visible;
+  background: #fff none repeat scroll 0 0;
+  border-radius: 5px;
+  display: block;
+  height: 10px;
+  margin: 0 6px;
+  transition: opacity 0.2s ease 0s;
+  width: 16px;
+  transition:.3s;
+}
+
+/*  */
+.c-timeline__list {
+    list-style: none;
+    overflow: hidden;
+}
+.c-timeline__item {
+    padding-left: 150px;
+    padding-bottom: 50px;
+    padding-right: 65px;
+    list-style: none;
+    /* overflow: hidden; */
+}
+.c-timeline__header {
+    position: relative;
+}
+.c-timeline__time {
+    left: -135px;
+    position: absolute;
+    top: 4px;
+    font-size: 0.75rem;
+    line-height: 1.5;
+    font-weight: 700;
+    font-family: "Lora", sans-serif;
+}
+.c-timeline__line {
+    left: -35px;
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: #d3b484;
+    top: 5px;
+    left: -20px;
+}
+.c-timeline__line::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 2px;
+    background: #d3b484;
+    height: 9999px;
+    top: 0;
+    left: 50%;
+    margin-left: -1px;
+}
+
+
+.c-timeline__heading {
+    margin-bottom: 10px;
+}
+.rec_img img{
+    width: 70px;
+    height: 70px;
+    border: 2px solid #FBB454;
+    box-shadow: 0px 0px 4px rgb(0 0 0 / 25%);
+    border-radius: 5px;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    transform: rotate(44deg);
+    margin-top: 14px;
+    margin-left: 5px;
+}
+/*  */
+.edu-news-area{
+    background-color: #FFF1DF;
+}
+.edu-news-area .nav-pills .nav-link{
+    background-color: #fff;
+    color: #000;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    margin: 15px;
+}
+.edu-news-area .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    color: #fff;
+    background-color: #F48C06;
+    border-radius: 5px;
+}
+.seminar_spa{
+    margin: 0 20px;
+}
+.seminar_img img{
+    width: 464px;
+    height: 473px;
+}
+.seminar_des p{
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 35px;
+    text-align: justify;
+}
+.footer-top{
+    background-color: #fff;
+
+}
+.contact_ic{
+    background: #f48c06;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    position: relative;
+}
+.contact_ic i{
+    position: absolute;
+    left: 36%;
+    top: 32%;
+    font-size: 20px;
+    color: #fff;
+}
+.contact_text{
+    margin-top: 8px;
+}
+.contact_text a{
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 38px;
+    color: #000;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+.msg_car{
+    background: #FFF1DF;
+    box-shadow: 0px 0px 4px rgb(0 0 0 / 25%);
+    border-radius: 5px;
+}
+.msg_car button{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    padding: 6px 120px;
+    color: #fff;
+}
+.msg_car label{
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 38px;
+    color: #000;
+}
+
+/* ============= 09. Photo Gallery ============= */
+.gallery-box .grid-item {
+  float: left;
+  margin-bottom: 10px;
+  padding: 0 5px;
+  width: auto !important;
+}
+.video-ger{
+    --bs-gutter-x: 0.5rem !important;
+}
+.professor-gallery .grid-item {
+  width: 33.33%
+}
+ul.gallery-menu li {
+  border: 1px solid #5e5e5e;
+  color: #5e5e5e;
+  cursor: pointer;
+  margin-left: 20px;
+  padding: 10px 20px;
+  text-transform: uppercase;
+}
+ul.gallery-menu li.active,ul.gallery-menu li:hover{
+  border: 1px solid #5950f7;
+  color: #5950f7;
+}
+.gallery-single {
+  display: block;
+  position: relative;
+}
+.gallery-single::after {
+  background: rgba(45, 62, 80, 0.8) none repeat scroll 0 0;
+  content: "";
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  opacity:0;
+  visibility:hidden;
+  transition:.4s;
+}
+.gallery-single:hover::after{opacity:1;visibility:visible;}
+.popup-gallery {
+  color: #fff;
+  font-size: 36px;
+  left: 0;
+  margin: 0 auto;
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: 25%;
+  transition: all 0.3s ease 0s;
+  visibility: hidden;
+  z-index: 99;
+}
+.gallery-single:hover .popup-gallery {
+  opacity: 1;
+  top: 38%;
+  visibility: visible;
+}
+
+/* ============= 10. Subscribe Section  ============= */
+.subcribe-content h3 {
+  color: #fff;
+  font-weight: 700;
+  margin: 0 0 22px;
+}
+.subcribe-content h4 {
+  color: #fff;
+  font-weight: 500;
+  font-size:24px;
+  margin: 0 0 38px;
+}
+.subcribe-content ul li a {
+  border: 1px solid #fff;
+  color: #fff;
+  display: block;
+  font-weight: 500;
+  margin-right: 18px;
+  padding: 12px 40px;
+  transition: all 0.4s ease 0s;
+}
+.subcribe-content ul li a:hover{background:#5950f7;border-color:#5950f7;}
+
+/* ============= 11. Education News ============= */
+.edu-post-info > span {
+  color: #404040;
+  font-size: 14px;
+  transition: all 0.4s ease 0s;
+}
+.edu-post-info span::after {
+  content: "|";
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.edu-post-info span:last-child::after {content: "";margin-left: 0;}
+.edu-news-content p {
+  color: #404040;
+  font-size: 18px;
+  font-weight: 500;
+  margin: 10px 0;
+}
+.news-button a {
+  text-transform: uppercase;
+  font-weight: 500;
+  transition:.3s;
+}
+.news-button a:hover{color:#5950f7;}
+.news-button a i {margin-left: 5px;transition:.3s;}
+.news-button a:hover i{margin-left: 2px;}
+
+/* ============= 12. Footer Css ============= */
+.address-area > h4 {
+  color: #fff;
+  display: block;
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0 0 40px;
+}
+.address-area > p {
+  color: #fff;
+  font-size: 14px;
+  margin: 25px 0;
+}
+.contact-social ul li a {
+  border-radius: 100px;
+  color: #fff;
+  display: block;
+  font-size: 16px;
+  height: 30px;
+  line-height: 30px;
+  margin-left: 5px;
+  text-align: center;
+  transition: all 0.3s ease 0s;
+  width: 30px;
+}
+.contact-social ul li a:hover {background: #fff none repeat scroll 0 0;color: #5950f7;}
+/* Footer Menu */
+.footer-menu ul li{display:block;}
+.footer-menu ul li a {
+  color: #fff;
+  cursor: pointer;
+  display: block;
+  font-weight: 400;
+  overflow: hidden;
+  padding-bottom: 8px;
+  transition:.3s;
+}
+.footer-menu ul li:last-child a{padding-bottom:0;}
+.footer-menu ul li a:hover{color: #5950f7;}
+/* Footer News */
+.post-img {float: left;margin-right: 15px;}
+.footer-post ul li {margin-bottom: 18px;}
+.footer-post ul li:last-child {margin: 0;}
+.post-cntnt {display: block;overflow: hidden;}
+.post-cntnt > h6 {color: #fff;line-height: 22px;margin: 0 0 5px;}
+.post-cntnt span {color: #fff;margin: 0;}
+/* Conatct Details */
+.contact-details ul li {
+  display: block;
+  font-weight: 300;
+  margin-bottom: 25px;
+}
+.address-area .contact-details ul li i {
+  border: 1px solid #fff;
+  color: #fff;
+  float: left;
+  font-size: 14px;
+  height: 30px;
+  line-height: 26px;
+  margin-right: 20px;
+  text-align: center;
+  width: 30px;
+}
+.contact-details ul li span {
+  color: #fff;
+  display: inline-block;
+  margin-bottom: 0;
+  margin-top: -7px;
+}
+/* Footer Bottom */
+.footer-bottom {
+  border-top: 1px solid #555;
+  padding: 15px 0;
+  text-align: center;
+}
+.footer-bottom > p, .footer-bottom > p a {
+  color: #fff;
+  margin: 0;
+  transition: all 0.3s ease 0s;
+}
+.footer-bottom > p a:hover{color:#5950f7}
+.address-area.post {padding-left: 50px;}
+.address-area.address {padding-left: 30px;}
+
+/* ============= 13. Breadcamp Area ============= */
+.bradcamb-content h1 {color: #fff;font-size: 30px;}
+.bradcamb-content ul li {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.bradcamb-content ul li a {color: #fff;font-size: 14px;}
+.bradcamb-content ul li i, .top-titel ul li span {display: inline-block;padding: 0 6px 0 8px;}
+.bradcamb-content a span {padding: 0 8px 0 10px;}
+
+/* ============= 14. About Us Page ============= */
+.about-content-left h2 {margin: 0 0 28px;}
+.about-content-left > ul {margin-bottom: 10px;margin-top: 20px;}
+.about-content-left > p {color: #404040;}
+.about-content-left > ul li {margin-bottom: 13px;color: #404040;}
+.about-content-left > ul li i {margin-right: 10px;}
+
+
+.professor-about .about-content {
+  max-width: 410px;
+  display: flex;
+  flex-direction: column;
+}
+.professor-about .subtitle {
+  font-size: 18px;
+  line-height: 1;
+  letter-spacing: 0.2em;
+  color: #5950F7;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+.professor-about .title {
+  font-size: 36px;
+  color: #2A2A2A;
+  margin-bottom: 20px;
+}
+.professor-about .content-title {
+  font-size: 16px;
+  font-weight: 400;
+  color: #303030;
+  margin-bottom: 20px;
+}
+.professor-about p {
+  margin-bottom: 40px;
+  color: #000;
+}
+/* ============= 15. News Page ============= */
+.news-page-area .edu-news-single {
+  margin-bottom: 40px;
+}
+/* Page Pagination */
+.pagination > li > a, .pagination > li > span {
+  background-color: #fff;
+  border: medium none;
+  color: #404040;
+  float: left;
+  font-weight: 500;
+  line-height: 1.42857;
+  margin-left: -1px;
+  padding: 6px 12px;
+  position: relative;
+  text-decoration: none;
+  transition: all 0.4s ease 0s;
+}
+.pagination > .active > a, .pagination > .active > a:focus, .pagination > .active > a:hover, .pagination > .active > span, .pagination > .active > span:focus, .pagination > .active > span:hover {
+  background-color: transparent;
+  border-color: #337ab7;
+  color: #5950f7;
+  cursor: default;
+  font-size: 24px;
+  font-weight: 500;
+  margin-top: -10px;
+  z-index: 3;
+}
+.pagination > li:first-child > a, .pagination > li:first-child > span {
+  background: #fff none repeat scroll 0 0;
+  border-radius: 100px;
+  box-shadow: 1px 1px 2px 2px #ddd;
+  color: #5950f7;
+  display: block;
+  font-weight: 700;
+  height: 40px;
+  line-height: 30px;
+  margin-left: 0;
+  margin-right: 92px;
+  margin-top: -5px;
+  text-align: center;
+  transition: all 0.4s ease 0s;
+  width: 40px;
+}
+.pagination > li:first-child > a:hover, .pagination > li:first-child > span:hover {background:#5950f7;color:#fff;box-shadow:none;}
+.pagination > li:last-child > a, .pagination > li:last-child > span {
+  background: #fff none repeat scroll 0 0;
+  border-radius: 100px;
+  box-shadow: 1px 1px 2px 2px #ddd;
+  display: block;
+  font-weight: 700;
+  height: 40px;
+  line-height: 30px;
+  margin-left: 92px !important;
+  text-align: center;
+  width: 40px;
+  transition:.4s;
+  color:#5950f7;
+  margin-top: -5px;
+}
+.pagination > li:last-child > a:hover, .pagination > li:last-child > span:hover{background:#5950f7;color:#fff;box-shadow:none;}
+.pagination > li > a:focus, .pagination > li > a:hover, .pagination > li > span:focus, .pagination > li > span:hover {background-color: transparent;}
+
+/* ============= 16. News Details Page ============= */
+.servdetls-img h2 {
+  background: #5950f7;
+  color: #fff;
+  display: block;
+  height: 70px;
+  left: 35px;
+  line-height: 25px;
+  margin: 0;
+  padding-top: 12px;
+  position: absolute;
+  text-align: center;
+  top: 20px;
+  width: 70px;
+}
+.servdetls-img h2 span {
+  color: #fff;
+  display: block;
+  font-size: 12px;
+}
+.deatils-titel h5 {
+  color: #555555;
+  font-weight: 500;
+  margin-bottom: 35px;
+  padding-bottom: 10px;
+  position: relative;
+  text-transform: uppercase;
+}
+.deatils-titel h5::after{
+  background: #555555 none repeat scroll 0 0;
+  bottom: 0;
+  content: "";
+  height: 1px;
+  left: 0;
+  position: absolute;
+  width: 30%;
+}
+.top-titel > h5 {color: #555555;font-weight: 500;}
+.ltst-post {padding-bottom: 20px;padding-top: 3px;}
+.ltst-post span::after {content: "|";margin:0 7px}
+.ltst-post span {
+  color: #555555;
+  font-size: 12px;
+  font-weight: 500;
+}
+.ltst-post span:last-child::after {content: "";margin-left: 0;}
+.news-content > p {color: #404040;}
+.news-content blockquote {
+  border-left: 2px solid #5950f7;
+  font-size: 17.5px;
+  margin: 35px 0 35px 45px;
+  padding: 0 20px;
+}
+.news-content blockquote p {overflow: hidden;color: #404040;}
+.tag-line {
+  border-bottom: 1px solid #5950f7;
+  display: block;
+  overflow: hidden;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+.tag-line > span {
+  color: #555555;
+  float: left;
+  font-size: 12px;
+  font-weight:600;
+}
+.tag-social {float: right;}
+.tag-social ul li a {
+  color: #555555;
+  font-size: 14px;
+  padding-left: 20px;
+}
+.tag-social ul li a:hover{color:#5950f7;}
+/* Comment Style */
+.comment-pic {
+  display: inline-block;
+  float: left;
+  margin-right: 25px;
+  overflow: hidden;
+}
+.comment-author {
+  display: block;
+  margin-bottom: 9px;
+  overflow: hidden;
+}
+.comment-author h3 {
+  float: left;
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0;
+  text-transform: uppercase;
+}
+.comment-author > ul {float: right;}
+.comment-author li {font-size: 12px;font-weight: 500;color: #555555;}
+.comment-author ul li a {color: #555555;font-size: 14px;font-weight: 500;}
+.comment-author ul li a:hover {color: #5950f7;}
+.comment-author ul li span {display: inline-block;padding: 0 6px 0 8px;}
+.comment-dis {display: block;margin: 0 0 20px;overflow: hidden;}
+.comment-box .deatils-titel h5::after {width: 18%;}
+.leave-reply-box .deatils-titel h5::after {width: 17%;}
+.comment-single-box.two {margin-left: 100px;}
+.comment-dis > p {color: #404040;}
+/* Search News */
+.search-news input {
+  background: transparent none repeat scroll 0 0;
+  border: 1px solid #dcd9d9;
+  box-shadow: none;
+  color: #555555;
+  font-size: 14px;
+  height: 45px;
+  padding-left: 10px;
+  width: 100%;
+  position:relative;
+}
+.search-button {
+  background: #5950f7 none repeat scroll 0 0;
+  border: medium none;
+  color: #fff;
+  font-size: 18px;
+  height: 45px;
+  position: absolute;
+  right: 16px;
+  width: 70px;
+  top:0px;
+  right: 0;
+}
+/* Category List */
+.category-list .deatils-titel h5::after {width: 25%;}
+.category-list ul li {width: 100%;}
+.category-list ul li a{
+  display: block;
+  padding-bottom: 10px;
+  padding-top: 20px;
+  color: #666666;
+  font-size: 12px;
+  font-weight: 500;
+  border-bottom: 1px solid #dcd9d9;
+}
+.category-list ul li a:hover{color:#5950f7;}
+.category-list ul li i {margin-right: 8px;}
+.category-list ul li:first-child a {padding-top: 0;}
+.category-list ul li:last-child a {
+  border-bottom: medium none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+.category-list ul li span {float: right;}
+/* Latest Post */
+.ltst-pst-img {float: left;margin-right: 15px;}
+.ltst-pst-cntnt {display: block;overflow: hidden;}
+.ltst-pst-cntnt > p {color: #404040;margin: 0;}
+.ltst-pst-cntnt .ltst-post {padding-bottom: 0;padding-top: 5px;}
+/* Tag List */
+.tag-list .deatils-titel h5::after {width: 12%;}
+.tag-list ul li a {
+  border: 1px solid #dcd9d9;
+  display: block;
+  font-size: 11px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  margin-right: 7px;
+  padding: 8px 22px;
+  text-transform: uppercase;
+  transition:.3s;
+}
+.tag-list ul li a:hover{background:#5950f7;color:#fff;border-color:#5950f7;}
+.tag-list ul li:nth-child(3) a,.tag-list ul li:nth-child(6) a {margin-right: 0;}
+
+/* ============= 17. Events Details Page ============= */
+.form-group,.form-single {margin-bottom: 25px;}
+.form-control {
+  background: transparent none repeat scroll 0 0;
+  border: 1px solid #c1c1c1;
+  border-radius: 0px;
+  box-shadow: none;
+  color: #555555;
+  height: 40px;
+  transition: all 0.3s ease 0s;
+  font-size:12px;
+}
+.form-textarea .form-control {
+  height: 120px;
+}
+.form-button .contact-submit {
+  background: #5950f7 none repeat scroll 0 0;
+  border: medium none;
+  color: #fff;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 500;
+  height: 35px;
+  margin-top: 50px;
+  width: 130px;
+}
+.form-button .contact-submit:hover {background: #555555 none repeat scroll 0 0;}
+p.form-messege {font-size: 20px;margin: 0;}
+.servdetls-img h5 {
+  color: #555555;
+  font-weight: 500;
+  margin: 20px 0 0;
+  text-transform: uppercase;
+}
+.event-schedule {display: block;overflow: hidden;}
+.event-schedule ul li{width: 33.33%;float:left;}
+.event-schedule ul li span {
+  color: #404040;
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 7px;
+}
+.event-schedule ul li span i {font-size: 18px;margin-right: 6px;}
+.event-schedule ul li p {font-size: 11px;font-weight: 500;margin: 0 0 2px;}
+.event-schedule ul li p a {
+  background: #5950f7 none repeat scroll 0 0;
+  color: #fff;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: 8px;
+  padding: 10px 30px;
+  transition:.4s;
+}
+.event-schedule ul li p a:hover{background:#555555}
+.event-description > p {color: #404040;}
+.events-details-left .deatils-titel h5::after {width: 20%;}
+.event-description .category-list .deatils-titel h5::after {width: 37%;}
+.events-details-left .deatils-titel h5::after {width: 25%;}
+.event-content-text .deatils-titel h5::after {width: 20%;}
+.event-content-text ul li {color: #404040;display: block;margin-bottom: 13px;}
+.event-content-text ul li i{margin-right:10px;font-size:16px;}
+.participant-details {margin-top: 23px;}
+.single-participants {float: left;}
+.single-participants:last-child {margin-right: 0;}
+.participant-details h5 {margin: 0 0 4px;}
+.event-participant .owl-carousel .owl-item img {transform-style: initial;}
+
+/* ============= 18. Contact Us Page ============= */
+.contact-map {
+  height: 400px;
+  width: 100%;
+  display: block;
+}
+/* Adress left */
+.contact-address {background: #ececec none repeat scroll 0 0;padding: 100px 80px;}
+.address-info ul li {
+  font-weight: 300;
+  margin-bottom: 19px;
+  width: 100%;
+}
+.address-info ul li i {
+  border: 1px solid #5950f7;
+  border-radius: 100px;
+  color: #5950f7;
+  float: left;
+  font-size: 24px;
+  height: 40px;
+  line-height: 40px;
+  margin-right: 20px;
+  text-align: center;
+  width: 40px;
+  margin-top: 5px;
+  transition:.3s;
+}
+.address-info ul li:hover i{color:#fff;background:#5950f7;}
+.address-info p {
+  color: #404040;
+  display: block;
+  font-size: 14px;
+  overflow: hidden;
+  padding-bottom: 0;
+  padding-top: 0;
+}
+/* social icons */
+.social-network.social-circle > h4 {
+  color: #4d4d4d;
+  margin: 0 0 15px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+}
+.social-network ul li a {
+  border-radius: 100px;
+  color: #5950f7;
+  display: block;
+  font-size: 16px;
+  height: 30px;
+  line-height: 30px;
+  margin-left: 6px;
+  text-align: center;
+  transition: all 0.4s ease 0s;
+  width: 30px;
+}
+.social-network ul li a:hover{background:#5950f7;color:#fff;}
+.contact-us-area .col-md-4 {padding-right: 0;}
+.contact-us-area .col-md-8 {padding-left: 0;}
+.contact-address-from {background: #f3f3f3 none repeat scroll 0 0;padding: 58px 100px;}
+.frequently-titel h5 {
+  margin: 0;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: #464646;
+}
+.contact-address-from .form-button .contact-submit {
+  height: 40px;
+  width: 140px;
+  margin-top:30px;
+}
+
+/* ============= 19. 404 Error ============= */
+.outerwrap-404 {
+  background-image: url("img/404/bg.png");
+  background-size: cover;
+  bottom: 0;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.error-main {
+  left: 0;
+  margin-top: -288px;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: 50%;
+}
+.error-main h6 {
+  color: #fff;
+  font-size: 80px;
+  line-height: 54px;
+  margin-bottom: 30px;
+  text-transform: capitalize;
+}
+.error-main > img {margin-bottom: 30px;}
+.error-main h2 {
+  color: #fff;
+  line-height: 25px;
+  margin-bottom: 50px;
+  padding-bottom: 8px;
+  text-transform: capitalize;
+}
+.error-main .icon-studio {display: block;margin-bottom: 40px;}
+.error-main a {
+  background: #5950f7 none repeat scroll 0 0;
+  color: #fff;
+  display: inline-block;
+  font-size: 14px;
+  text-transform: uppercase;
+  width:150px;
+  height:40px;
+  line-height:40px;
+  font-weight:500;
+}
+.error-main a:hover{background:#555555;}
+
+/* ============= 20. ScrollUp ============= */
+#scrollUp {
+  background: #5950f7 none repeat scroll 0 0;
+  border-radius: 0px;
+  bottom: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  color: #fff;
+  font-size: 28px;
+  height: 40px;
+  line-height: 35px;
+  position: fixed;
+  right: 15px;
+  text-align: center;
+  transition: all 0.3s ease 0s;
+  width: 40px;
+  z-index: 200;
+}
+#scrollUp:hover{background:#000;}

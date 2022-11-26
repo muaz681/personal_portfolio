@@ -1,0 +1,95 @@
+/* =======================================
+
+	Template: Unitech
+
+========================================== */
+.header-left p {color: #fff;margin: 0;}
+.header-right ul li a {
+  border-radius: 100px;
+  color: #fff;
+  display: block;
+  font-size: 16px;
+  height: 30px;
+  line-height: 30px;
+  margin-left: 5px;
+  text-align: center;
+  width: 30px;
+  transition:.3s;
+}.header-right ul li a:hover{background:#fff;color:#5950f7;}
+.logo-area {margin-bottom: 34px;margin-top: 35px;}
+.header-menu {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+}
+.mobile-menu-area {display: none;}
+.main-menu nav ul li {
+  display: inline-block;
+  position: relative;
+}
+.main-menu nav ul li a {
+  color: #404040;
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 40px 14px;
+  position: relative;
+  text-transform: uppercase;
+  transition: all 0.4s ease 0s;
+}
+.main-menu nav ul li.active a,.main-menu nav ul li:hover a{
+    color: #f48c06;
+}
+.main-menu nav ul li > ul {
+  background: #fff none repeat scroll 0 0;
+  border-top: 2px solid #5950f7;
+  box-shadow: 0 3px 18px rgba(0, 0, 0, 0.1);
+  margin: 0;
+  opacity: 0;
+  padding: 8px 20px;
+  position: absolute;
+  text-align: left;
+  top: 100px;
+  transform: scaleY(0);
+  transform-origin: 0 0 0;
+  transition: all 0.3s ease 0s;
+  visibility: hidden;
+  width: 200px;
+}
+.main-menu ul li ul li {display: block;overflow: hidden;}
+.main-menu ul li ul > li > a {
+  color: #555 !important;
+  display: block;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 12px;
+  overflow: hidden;
+  padding: 10px 0;
+  text-transform: capitalize;
+  transition: all 0.3s ease 0s;
+}
+.main-menu ul li ul > li:last-child > a {border: medium none;}
+.main-menu ul li ul > li > a:hover{color:#5950f7!important;margin-left:4px;}
+.main-menu ul li:hover ul {
+  opacity: 1;
+  visibility: visible;
+  z-index: 999;
+  transform:scaley(1);
+}
+ /*Sticky Menu*/
+.sticky {
+  animation: 300ms ease-in-out 0s normal none 1 running fadeInDown;
+  background: #fff none repeat scroll 0 0;
+  box-shadow: 0 8px 6px -8px #555;
+  left: 0;
+  margin: auto;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 9999;
+}
+.sticky .main-menu nav ul li a {padding: 24px 15px;}
+.sticky .logo-area {margin-bottom: 20px;margin-top: 19px;}
+.sticky .main-menu ul li:hover ul {top: 71px;}
+.sticky .main-menu ul li ul > li > a{padding:10px 0px;}
