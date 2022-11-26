@@ -40,7 +40,7 @@
 
                                         <td>{{ $schedule->date }}</td>
                                         <td>{{ $schedule->description }}</td>
-                                        
+
                                         <td>{{ $schedule->created_at->diffForHumans() }}</td>
 
                                         <td>

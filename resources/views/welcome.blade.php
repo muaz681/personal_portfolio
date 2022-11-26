@@ -238,24 +238,6 @@
                     <div class="col-lg-6">
                         {{-- {{ $schedules }} --}}
                         <div class="row">
-                            {{-- <div class="col-lg-12">
-                                <div class="events-tab-top text-right text-uppercase">
-                                    <ul class="nav nav-tabs" role="tablist">
-                                        @foreach($schedules as $schedule)
-                                        <?php $date = Date::make($schedule->date)->format('l'); ?>
-
-                                        <?php $day = Lang::get('date.day.'.$date); ?>
-                                        {{ Date::make($schedule->date)->format('d M') }} {{ $day }}
-                                        {{Date::make($schedule->date)->format('h:i')}}
-                                        <li class="nav-item" role="presentation">
-                                            <a href="#/" class="nav-link active" data-bs-toggle="tab" data-bs-target="#event-one">
-                                                <span class="event-date">{{ Date::make($schedule->date)->format('d M') }}</span>
-                                            </a>
-                                        </li>
-                                        @endforeach
-                                    </ul>
-                                </div>
-                            </div> --}}
                             <div class="col-lg-12 pt-5">
                                 <div class="tab-content">
                                     <!-- Event Top Single Strat -->
@@ -267,10 +249,10 @@
                                                     <ul class="nav-tabs" role="tablist">
                                                         @foreach($schedules as $schedule)
                                                         <?php $date = Date::make($schedule->date)->format('l'); ?>
-
                                                         <?php $day = Lang::get('date.day.'.$date); ?>
-                                                        {{-- {{ Date::make($schedule->date)->format('d M') }} {{ $day }} --}}
-                                                        {{-- {{Date::make($schedule->date)->format('h:i')}} --}}
+                                                        @if(App\Models\Schedule::where('date', '<', Carbon\Carbon::now())->each(function ($schedule) {
+                                                            $schedule->delete();
+                                                        }))
                                                         <li class="nav-item d-block" role="presentation">
                                                             <a href="#/" class="nav-link active" data-bs-toggle="tab" data-bs-target="#m1">
                                                                 <div class="eventtab-single-content">
@@ -285,6 +267,7 @@
                                                                 </div>
                                                             </a>
                                                         </li>
+                                                        @endif
                                                         @endforeach
                                                     </ul>
                                                 </div>
