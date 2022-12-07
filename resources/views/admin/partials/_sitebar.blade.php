@@ -24,7 +24,7 @@
                 </li>
 
                 <li class="slide">
-                    <a class="side-menu__item has-link @yield('dashboard')" data-bs-toggle="slide" href=""><i class="side-menu__icon fe fe-home"></i>
+                    <a class="side-menu__item has-link @yield('home_page')" data-bs-toggle="slide" href="{{ route('home_page') }}"><i class="side-menu__icon fe fe-home"></i>
                         {{-- {{ route('home') }} --}}
                         <span class="side-menu__label">Dashboard</span>
                     </a>
@@ -73,14 +73,6 @@
                     <a class="side-menu__item @yield('schedule_page')" data-bs-toggle="slide" href="{{ route('schedule_page') }}"><i
                         class="side-menu__icon fe fe-slack"></i><span
                         class="side-menu__label">Scadule</span><i
-                        class="angle fe fe-chevron-right"></i>
-                    </a>
-                </li>
-                {{-- Home Page --}}
-                <li class="slide">
-                    <a class="side-menu__item @yield('home_page')" data-bs-toggle="slide" href="{{ route('home_page') }}"><i
-                        class="side-menu__icon fe fe-slack"></i><span
-                        class="side-menu__label">Home Page</span><i
                         class="angle fe fe-chevron-right"></i>
                     </a>
                 </li>

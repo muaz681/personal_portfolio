@@ -119,10 +119,10 @@
     background-size: cover;
 }
 .color-gr{
-    background-image: linear-gradient(to left, rgba(255,0,0,0), rgb(46 41 41 / 66%));
+    background-image: linear-gradient(to left, rgb(49 44 44 / 28%), rgb(46 41 41 / 90%));
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
     height: 758px;
-
+    position: relative;
 }

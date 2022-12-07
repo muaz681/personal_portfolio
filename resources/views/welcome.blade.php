@@ -5,7 +5,7 @@
     <!-- Header Area Start -->
     <header>
         <!-- Header Top Area Start -->
-        <div class="header-top-area default-bg ptb-10">
+        {{-- <div class="header-top-area default-bg ptb-10">
             <div class="container">
                 <div class="row">
                     <!-- Header Top left social Start -->
@@ -34,7 +34,7 @@
                     <!-- Header Top right social End -->
                 </div>
             </div>
-        </div>
+        </div> --}}
         <!-- Header Top Area End -->
         <!-- Header Menu Area Start -->
         <div class="menu-area-main" id="sticky-header">
@@ -42,9 +42,11 @@
                 <div class="row">
                     <!-- Logo Area Start -->
                     <div class="col-md-3">
+                        @if(general_setting('app_logo'))
                         <div class="logo-area">
-                            <a href="index.html"><img src="{{ url('assets/frontend/img/icon/logo.png') }}" alt="" /></a>
+                            <a href="{{ route('home') }}"><img src="{{ asset(general_setting('app_logo')) }}" alt="" /></a>
                         </div>
+                        @endif
                     </div>
                     <!-- Logo Area End -->
                     <!-- Main Menu Start -->
@@ -53,16 +55,20 @@
                             <nav>
                                 <ul>
                                     <li class="active">
-                                        <a href="index.html">Home</a>
+                                        <a href="{{ route('home') }}">Home</a>
                                     </li>
-                                    <li><a href="about-us.html">ABOUT US</a></li>
-                                    <li><a href="news.html">News</a>
+                                    <li><a href="#about_part">ABOUT US</a></li>
+                                    <li><a href="#Research_part">Research</a>
                                     </li>
-                                    <li><a href="events.html">Events</a>
+                                    <li><a href="#Shedule_part">Shedule</a>
                                     </li>
-                                    <li><a href="#">PAGES</a>
+                                    <li><a href="#Gallery_part">Gallery</a>
                                     </li>
-                                    <li><a href="contact-us.html">CONTACT US</a></li>
+                                    <li><a href="#Achivement_part">Achivement</a>
+                                    </li>
+                                    <li><a href="#Seminar_part">Seminar</a>
+                                    </li>
+                                    <li><a href="#contact_part">CONTACT US</a></li>
                                 </ul>
                             </nav>
                         </div>
@@ -86,7 +92,7 @@
                                             </li>
                                             <li><a href="#">PAGES</a>
                                             </li>
-                                            <li><a href="contact-us.html">CONTACT US</a></li>
+                                            <li><a href="#contact_part">CONTACT US</a></li>
                                         </ul>
                                     </nav>
                                 </div>
@@ -115,9 +121,34 @@
                                 <h1>{{ $banner->banner_description }}</h1>
                                 <p>I have more than 35 years of exprience more than enough obtain itself, because it is  pain, but because occasionally circumstances occur</p>
                             </div>
-                            <div class="col-md-6 col-lg-6"></div>
+                            <div class="col-md-6 col-lg-6">
+                                <div class="follow_me">
+                                    @if(general_setting('app_fb'))
+                                    <div class="contact_lc my-2">
+                                        <a href="{{ general_setting('app_fb') }}">
+                                            <i class="zmdi zmdi-facebook"></i>
+                                        </a>
+                                    </div>
+                                    @endif
+                                    @if(general_setting('app_instagram'))
+                                    <div class="contact_lc my-2">
+                                        <a href="{{ general_setting('app_instagram') }}">
+                                            <i class="zmdi zmdi-linkedin"></i>
+                                        </a>
+                                    </div>
+                                    @endif
+                                    @if(general_setting('app_youtube'))
+                                    <div class="contact_lc my-2">
+                                        <a href="{{ general_setting('app_youtube') }}">
+                                            <i class="zmdi zmdi-twitter"></i>
+                                        </a>
+                                    </div>
+                                    @endif
+                                </div>
+                            </div>
                         </div>
                     </div>
+
                 </div>
             </div>
             @endforeach
@@ -127,7 +158,7 @@
     <!-- Page Content Start -->
     <div class="page-content">
         <!-- About Us Area Start -->
-        <section class="professor-about ptb-110">
+        <section class="professor-about ptb-110" id="about_part">
             <div class="container">
                 <div class="row align-items-center">
 
@@ -144,7 +175,7 @@
                             <h5 class="content-title">Knowledge is the main factor for beign a Human</h5>
                             <p>{{ home_content('about_description') }}</p>
                             <div class="slide-btn">
-                                <a href="contact.html">Contact Now</a>
+                                <a href="#contact_part">Contact Now</a>
                             </div>
                         </div>
                     </div>
@@ -153,7 +184,7 @@
         </section>
         <!-- About Us Area End -->
         <!--  Research Start -->
-        <section class="research-area">
+        <section class="research-area" id="Research_part">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
@@ -167,21 +198,23 @@
                     @foreach($researches as $research)
                     <div class="col-md-4 py-1">
                         <div class="rese-bg-image" style="max-width: 22rem; position: relative; cursor: pointer;" data-bs-toggle="modal" data-bs-target="#example{{ $research->id }}">
-                            <img src="{{ asset($research->photo) }}" />
-                            <div class="mask text-light d-flex justify-content-center flex-column text-center" style="background-color: rgba(0, 0, 0, 0.5); position: absolute;
-                            top: 0;
-                            left: 0;
-                            height: 100%;
-                            width: 100%;">
-                              <h4>{{ $research->title }}</h4>
+                            <img src="{{ asset($research->photo) }}" class="img-fluid" />
+                            <div class="mask text-light d-flex flex-column text-center">
+                              <div class="rscr_icon">
+                                <i class="zmdi zmdi-tune"></i>
+                              </div>
+                              <h4 class="pt-4">{{ $research->title }}</h4>
                               <p class="m-0">{{ $research->description }}</p>
+                              <div class="rscr_arr_icon">
+                                <i class="zmdi zmdi-arrow-right"></i>
+                              </div>
                             </div>
                         </div>
                         {{--  --}}
                         <div class="modal fade" id="example{{ $research->id }}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                             <div class="modal-dialog modal-dialog-scrollable">
                                 <div class="modal-content">
-                                    <div class="modal-header">
+                                    <div class="modal-header mdl_hdr_md">
                                       <h1 class="modal-title fs-5" id="exampleModalScrollableTitle">{{ $research->title }}</h1>
                                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                     </div>
@@ -189,7 +222,7 @@
                                       <p>{{ $research->description }}</p>
                                     </div>
                                     <div class="modal-footer">
-                                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                      <button type="button" class="btn btn-secondary mdl_ft_btn" data-bs-dismiss="modal">Close</button>
                                     </div>
                                   </div>
                             </div>
@@ -203,7 +236,7 @@
         </section>
         <!-- Research Area End -->
         <!-- Upcoming Event Area Start -->
-        <section class="upcoming-event">
+        <section class="upcoming-event" id="Shedule_part">
             <div class="container">
                 <div class="row">
                     <!-- Section Title Left -->
@@ -224,10 +257,10 @@
                         <div class="tab-content upcom-tab-content">
 
                             <div class="about-content">
-                                <h5 class="content-title">{{ home_content('program_title') }}</h5>
+                                <div class="content-title">{{ home_content('program_title') }}</div>
                                 <p>{{ home_content('program_description') }}</p>
                                 <div class="slide-btn">
-                                    <a href="contact.html">Contact Now</a>
+                                    <a href="#contact_part">Contact Now</a>
                                 </div>
                             </div>
 
@@ -247,12 +280,12 @@
                                             <div class="col-lg-12">
                                                 <div class="event-single-tab">
                                                     <ul class="nav-tabs" role="tablist">
-                                                        @foreach($schedules as $schedule)
+                                                        @foreach($schedules as $key => $schedule)
                                                         <?php $date = Date::make($schedule->date)->format('l'); ?>
                                                         <?php $day = Lang::get('date.day.'.$date); ?>
                                                         @if(App\Models\Schedule::where('date', '<', Carbon\Carbon::now())->each(function ($schedule) {
                                                             $schedule->delete();
-                                                        }))
+                                                        }) && $key == 0 || $key <= 3 )
                                                         <li class="nav-item d-block" role="presentation">
                                                             <a href="#/" class="nav-link active" data-bs-toggle="tab" data-bs-target="#m1">
                                                                 <div class="eventtab-single-content">
@@ -286,7 +319,7 @@
         </section>
         <!-- Upcoming Event Area End -->
         <!-- Photo Gallery Area Start -->
-        <section class="photo-gallery-area pt-110 pb-100">
+        <section class="photo-gallery-area pt-110 pb-100" id="Gallery_part">
             <div class="container">
                 <div class="row">
                     <!-- Section Title Left -->
@@ -336,7 +369,7 @@
                                     <div class="col-md-4">
                                         <div class="card">
                                             <div class="embed-responsive embed-responsive-16by9">
-                                                <iframe width="425" height="315"
+                                                <iframe
                                                     src="{{ $video->link }}">
                                                 </iframe>
                                             </div>
@@ -353,7 +386,7 @@
         <!-- Photo Gallery Area End -->
 
         <!-- Achivement Area Start -->
-        <section class="subcribe-area ptb-110">
+        <section class="subcribe-area ptb-110" id="Achivement_part">
             <div class="container">
                 <div class="row">
                     <!-- Section Title Left -->
@@ -363,32 +396,293 @@
                         </h2>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="c-timeline pt-5">
+                <div class="row pt-5 ms-5">
+                    <div class="col-md-5">
+                        <div class="c-timeline">
                             <ul class="c-timeline__list">
-                                @foreach($achives as $achive)
                               <li class="c-timeline__item">
-                                <header class="c-timeline__header">
-                                  <span class="c-timeline__time">{{ $achive->date }}</span>
-                                  <span class="c-timeline__line"></span>
-                                </header>
                                 <div class="row px-3">
+                                    <div class="col-md-10">
+
+                                    </div>
+                                    <div class="col-md-2">
+
+                                    </div>
+                                </div>
+                              </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-2 marg_ach">
+                        <header class="c-timeline__header">
+                            <span class="c-timeline__line"></span>
+                          </header>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="c-timeline py-5">
+                            <ul class="c-timeline__list">
+                              <li class="c-timeline__item">
+                                <div class="row px-3">
+                                    <div class="col-md-12">
+                                        {{-- <span class="c-timeline__time">{{ $achive->date }}</span> --}}
+                                    </div>
+                                </div>
+
+                              </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                    @foreach($achives as $key => $achive)
+                    @if($key == 0)
+                    <div class="col-md-5">
+                        <div class="c-timeline">
+                            <ul class="c-timeline__list">
+                              <li class="c-timeline__item pe-3">
+                                <div class="row px-3">
+                                    <div class="col-md-10">
+                                        <div class="rec_text text-right">
+                                            <h4 class="c-timeline__heading">{{ $achive->title }}</h4>
+                                        <p class="c-timeline__body">{{ $achive->description }}</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <div class="rec_img">
+                                            <img src="{{ asset($achive->photo) }}" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                              </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-2 marg_ach">
+                        <header class="c-timeline__header">
+                            <span class="c-timeline__line"></span>
+                          </header>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="c-timeline">
+                            <ul class="c-timeline__list">
+                              <li class="c-timeline__item tmln_mdfy">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <span class="c-timeline__time">{{ $achive->date }}</span>
+                                    </div>
+                                </div>
+
+                              </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                    @endif
+                    @if($key == 1)
+                    <div class="col-md-5 text-right">
+                        <div class="c-timeline">
+                            <ul class="c-timeline__list">
+                              <li class="c-timeline__item tmln_mdfy">
+                                <div class="row px-3">
+                                    <div class="col-md-12">
+                                        <span class="c-timeline__time">{{ $achive->date }}</span>
+                                    </div>
+                                </div>
+
+                              </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-2 marg_ach">
+                        <header class="c-timeline__header">
+                            <span class="c-timeline__line"></span>
+                          </header>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="c-timeline">
+                            <ul class="c-timeline__list">
+                              <li class="c-timeline__item pe-3">
+                                <div class="row">
                                     <div class="col-md-2">
                                         <div class="rec_img">
                                             <img src="{{ asset($achive->photo) }}" alt="">
                                         </div>
                                     </div>
                                     <div class="col-md-10">
-                                        <div class="rec_text">
+                                        <div class="rec_text text-left">
                                             <h4 class="c-timeline__heading">{{ $achive->title }}</h4>
                                         <p class="c-timeline__body">{{ $achive->description }}</p>
                                         </div>
                                     </div>
                                 </div>
+                              </li>
+                            </ul>
+                        </div>
+                    </div>
+                    @endif
+                    @if($key == 2)
+                    <div class="col-md-5">
+                        <div class="c-timeline">
+                            <ul class="c-timeline__list">
+                              <li class="c-timeline__item pe-3">
+                                <div class="row px-3">
+                                    <div class="col-md-10">
+                                        <div class="rec_text text-right">
+                                            <h4 class="c-timeline__heading">{{ $achive->title }}</h4>
+                                        <p class="c-timeline__body">{{ $achive->description }}</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <div class="rec_img">
+                                            <img src="{{ asset($achive->photo) }}" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                              </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-2 marg_ach">
+                        <header class="c-timeline__header">
+                            <span class="c-timeline__line"></span>
+                          </header>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="c-timeline">
+                            <ul class="c-timeline__list">
+                              <li class="c-timeline__item tmln_mdfy">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <span class="c-timeline__time">{{ $achive->date }}</span>
+                                    </div>
+                                </div>
 
                               </li>
-                              @endforeach
+
+                            </ul>
+                        </div>
+                    </div>
+                    @endif
+                    @if($key == 3)
+                    <div class="col-md-5 text-right">
+                        <div class="c-timeline">
+                            <ul class="c-timeline__list">
+                              <li class="c-timeline__item tmln_mdfy">
+                                <div class="row px-3">
+                                    <div class="col-md-12">
+                                        <span class="c-timeline__time">{{ $achive->date }}</span>
+                                    </div>
+                                </div>
+
+                              </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-2 marg_ach">
+                        <header class="c-timeline__header">
+                            <span class="c-timeline__line"></span>
+                          </header>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="c-timeline">
+                            <ul class="c-timeline__list">
+                              <li class="c-timeline__item pe-3">
+                                <div class="row">
+                                    <div class="col-md-2">
+                                        <div class="rec_img">
+                                            <img src="{{ asset($achive->photo) }}" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-10">
+                                        <div class="rec_text text-left">
+                                            <h4 class="c-timeline__heading">{{ $achive->title }}</h4>
+                                        <p class="c-timeline__body">{{ $achive->description }}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                              </li>
+                            </ul>
+                        </div>
+                    </div>
+                    @endif
+                    @if($key == 4)
+                    <div class="col-md-5">
+                        <div class="c-timeline">
+                            <ul class="c-timeline__list">
+                              <li class="c-timeline__item pe-3">
+                                <div class="row px-3">
+                                    <div class="col-md-10">
+                                        <div class="rec_text text-right">
+                                            <h4 class="c-timeline__heading">{{ $achive->title }}</h4>
+                                        <p class="c-timeline__body">{{ $achive->description }}</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <div class="rec_img">
+                                            <img src="{{ asset($achive->photo) }}" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                              </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-2 marg_ach">
+                        <header class="c-timeline__header">
+                            <span class="c-timeline__line"></span>
+                          </header>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="c-timeline">
+                            <ul class="c-timeline__list">
+                              <li class="c-timeline__item tmln_mdfy">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <span class="c-timeline__time">{{ $achive->date }}</span>
+                                    </div>
+                                </div>
+
+                              </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                    @endif
+                    @endforeach
+                    <div class="col-md-5">
+                        <div class="c-timeline">
+                            <ul class="c-timeline__list">
+                              <li class="c-timeline__item">
+                                <div class="row px-3">
+                                    <div class="col-md-10">
+
+                                    </div>
+                                    <div class="col-md-2">
+
+                                    </div>
+                                </div>
+                              </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-2 marg_ach">
+                        <header class="c-timeline__header">
+                            <span class="c-timeline__line cut_tml_brdr"></span>
+                          </header>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="c-timeline py-4">
+                            <ul class="c-timeline__list">
+                              <li class="c-timeline__item">
+                                <div class="row px-3">
+                                    <div class="col-md-12">
+                                        {{-- <span class="c-timeline__time">{{ $achive->date }}</span> --}}
+                                    </div>
+                                </div>
+
+                              </li>
+
                             </ul>
                         </div>
                     </div>
@@ -398,7 +692,7 @@
         <!-- Achivement Area End -->
         <!-- Seminar News Area Start -->
 
-        <div class="container">
+        <div class="container" id="Seminar_part">
             <!-- Section Title Right -->
             <div class="row">
                 <!-- Section Title Left -->
@@ -490,7 +784,7 @@
     <!-- Footer Area Start -->
     <footer class="theme-color-bg">
         <!-- Footer Top Arae Start -->
-        <div class="footer-top pt-80 pb-65">
+        <div class="footer-top pt-80 pb-65" id="contact_part">
             <div class="container">
                 <div class="row">
                     <div class="col-md-6">
@@ -603,7 +897,7 @@
                     </div>
                     <div class="col-md-6">
                         <div class="card msg_car p-5">
-                            <form action="{{ route('apply.store') }}" method="POST">
+                            <form action="{{ route('apply.store') }}" method="POST" enctype="multipart/form-data">
                                 <div class="mb-3">
                                   <label for="name" class="form-label">Name</label>
                                   <input type="text" name="name" class="form-control" id="name">

@@ -29,7 +29,7 @@
   position: relative;
 }
 .main-menu nav ul li a {
-  color: #404040;
+  color: #f4f1f1;
   display: block;
   font-size: 14px;
   font-weight: 500;
@@ -80,16 +80,26 @@
  /*Sticky Menu*/
 .sticky {
   animation: 300ms ease-in-out 0s normal none 1 running fadeInDown;
-  background: #fff none repeat scroll 0 0;
+  background: #2d2c2cc9 none repeat scroll 0 0 !important;
   box-shadow: 0 8px 6px -8px #555;
-  left: 0;
+  left: 0 !important;
   margin: auto;
-  position: fixed;
-  top: 0;
+  position: fixed !important;
+  top: 0 !important;
   width: 100%;
   z-index: 9999;
 }
+.menu-area-main{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+}
+.logo-area img{
+    width: 35%;
+}
 .sticky .main-menu nav ul li a {padding: 24px 15px;}
-.sticky .logo-area {margin-bottom: 20px;margin-top: 19px;}
+.sticky .logo-area {margin-top: 19px;}
 .sticky .main-menu ul li:hover ul {top: 71px;}
 .sticky .main-menu ul li ul > li > a{padding:10px 0px;}
