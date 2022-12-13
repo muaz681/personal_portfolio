@@ -113,8 +113,8 @@
   width: 124px;
 }
 .professor-slider .slider-item {
-  height: 758px;
-  background-repeat: no-repeat;
+    height: 100vh;
+    background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
 }
@@ -123,6 +123,6 @@
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
-    height: 758px;
+    height: 100vh;
     position: relative;
 }

@@ -275,7 +275,7 @@
     color: #000;
 }
 .rese-row{
-    --bs-gutter-x: -13.5rem;
+    --bs-gutter-x: 0.5rem;
 }
 .modal-content{
     margin-top: 80px;
@@ -623,6 +623,10 @@
     background-color: rgba(0, 0, 0, 0.5);
     position: absolute;
     padding-top: 100px;
+    transition: all 0.3s linear;
+}
+.mask:hover{
+    background: #ffb100b3;
 }
 .rscr_icon i{
     color: #fff;

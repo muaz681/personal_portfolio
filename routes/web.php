@@ -27,6 +27,24 @@ use App\Http\Controllers\AchiveController;
 // Route::get('/', function () {
 //     return view('welcome');
 // });
+
+
+Route::get('send_mail', function () {
+
+    $details = [
+        'title' => 'Mail from ItSolutionStuff.com',
+        'body' => 'This is for testing email using smtp'
+    ];
+
+    \Mail::to('muaz68128@gmail.com')->send(new \App\Mail\MyTestMail($details));
+
+    // dd("Email is Sent.");
+});
+
+Route::post('store', [ApplyController::class, 'store'])->name('apply.store');
+
+
+
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
 Route::get('/clear', function(){
@@ -191,7 +209,7 @@ Route::group(['prefix' => 'video'], function(){
 */
 
 Route::get('/apply', [ApplyController::class, 'index'])->name('apply.index');
-Route::post('store', [ApplyController::class, 'store'])->name('apply.store');
+
 Route::get('edit/{id}', [ApplyController::class, 'edit'])->name('apply.edit');
 
 

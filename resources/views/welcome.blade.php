@@ -77,7 +77,7 @@
                 </div>
             </div>
             <!-- MOBILE-MENU-AREA START -->
-            <div class="mobile-menu-area">
+            {{-- <div class="mobile-menu-area">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12">
@@ -100,7 +100,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> --}}
             <!-- MOBILE-MENU-AREA END  -->
         </div>
         <!-- Header Menu Area End -->
@@ -162,13 +162,13 @@
             <div class="container">
                 <div class="row align-items-center">
 
-                    <div class="col-md-7">
+                    <div class="col-md-7 col-12">
                         <div class="about-image">
-                            <img src="{{ url( asset(home_content('about_img'))) }}" alt="About Image">
+                            <img class="img-fluid" src="{{ url( asset(home_content('about_img'))) }}" alt="About Image">
                         </div>
                     </div>
 
-                    <div class="col-md-5">
+                    <div class="col-md-5 col-12">
                         <div class="about-content">
                             <span class="subtitle">Hello There</span>
                             <h2 class="title">I AM {{ home_content('about_name') }}</h2>
@@ -196,8 +196,8 @@
                 <div class="row pt-5 rese-row">
                     {{-- {{ $researches }} --}}
                     @foreach($researches as $research)
-                    <div class="col-md-4 py-1">
-                        <div class="rese-bg-image" style="max-width: 22rem; position: relative; cursor: pointer;" data-bs-toggle="modal" data-bs-target="#example{{ $research->id }}">
+                    <div class="col-md-4 py-1 col-sm-12">
+                        <div class="rese-bg-image" style="position: relative; cursor: pointer;" data-bs-toggle="modal" data-bs-target="#example{{ $research->id }}">
                             <img src="{{ asset($research->photo) }}" class="img-fluid" />
                             <div class="mask text-light d-flex flex-column text-center">
                               <div class="rscr_icon">
@@ -396,8 +396,8 @@
                         </h2>
                     </div>
                 </div>
-                <div class="row pt-5 ms-5">
-                    <div class="col-md-5">
+                <div class="row pt-5 ms-5 res_ms">
+                    <div class="col-md-5 res_col">
                         <div class="c-timeline">
                             <ul class="c-timeline__list">
                               <li class="c-timeline__item">
@@ -413,12 +413,12 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="col-md-2 marg_ach">
+                    <div class="col-md-2 res_col marg_ach">
                         <header class="c-timeline__header">
                             <span class="c-timeline__line"></span>
                           </header>
                     </div>
-                    <div class="col-md-5">
+                    <div class="col-md-5 res_col">
                         <div class="c-timeline py-5">
                             <ul class="c-timeline__list">
                               <li class="c-timeline__item">
@@ -435,18 +435,18 @@
                     </div>
                     @foreach($achives as $key => $achive)
                     @if($key == 0)
-                    <div class="col-md-5">
+                    <div class="col-md-5 col-sm-12 res_col_bottom">
                         <div class="c-timeline">
                             <ul class="c-timeline__list">
                               <li class="c-timeline__item pe-3">
-                                <div class="row px-3">
-                                    <div class="col-md-10">
+                                <div class="row px-3 res_px">
+                                    <div class="col-md-10 col-8">
                                         <div class="rec_text text-right">
                                             <h4 class="c-timeline__heading">{{ $achive->title }}</h4>
                                         <p class="c-timeline__body">{{ $achive->description }}</p>
                                         </div>
                                     </div>
-                                    <div class="col-md-2">
+                                    <div class="col-md-2 col-4">
                                         <div class="rec_img">
                                             <img src="{{ asset($achive->photo) }}" alt="">
                                         </div>
@@ -461,7 +461,7 @@
                             <span class="c-timeline__line"></span>
                           </header>
                     </div>
-                    <div class="col-md-5">
+                    <div class="col-md-5 col-sm-12 res_col_top">
                         <div class="c-timeline">
                             <ul class="c-timeline__list">
                               <li class="c-timeline__item tmln_mdfy">
@@ -478,7 +478,7 @@
                     </div>
                     @endif
                     @if($key == 1)
-                    <div class="col-md-5 text-right">
+                    <div class="col-md-5 text-right col-sm-12 res_col_top">
                         <div class="c-timeline">
                             <ul class="c-timeline__list">
                               <li class="c-timeline__item tmln_mdfy">
@@ -498,17 +498,17 @@
                             <span class="c-timeline__line"></span>
                           </header>
                     </div>
-                    <div class="col-md-5">
+                    <div class="col-md-5 col-sm-12 res_col_bottom">
                         <div class="c-timeline">
                             <ul class="c-timeline__list">
                               <li class="c-timeline__item pe-3">
                                 <div class="row">
-                                    <div class="col-md-2">
+                                    <div class="col-md-2 col-4">
                                         <div class="rec_img">
                                             <img src="{{ asset($achive->photo) }}" alt="">
                                         </div>
                                     </div>
-                                    <div class="col-md-10">
+                                    <div class="col-md-10 col-8">
                                         <div class="rec_text text-left">
                                             <h4 class="c-timeline__heading">{{ $achive->title }}</h4>
                                         <p class="c-timeline__body">{{ $achive->description }}</p>
@@ -521,18 +521,18 @@
                     </div>
                     @endif
                     @if($key == 2)
-                    <div class="col-md-5">
+                    <div class="col-md-5 col-sm-12 res_col_bottom">
                         <div class="c-timeline">
                             <ul class="c-timeline__list">
                               <li class="c-timeline__item pe-3">
                                 <div class="row px-3">
-                                    <div class="col-md-10">
+                                    <div class="col-md-10 col-8">
                                         <div class="rec_text text-right">
                                             <h4 class="c-timeline__heading">{{ $achive->title }}</h4>
                                         <p class="c-timeline__body">{{ $achive->description }}</p>
                                         </div>
                                     </div>
-                                    <div class="col-md-2">
+                                    <div class="col-md-2 col-4">
                                         <div class="rec_img">
                                             <img src="{{ asset($achive->photo) }}" alt="">
                                         </div>
@@ -547,7 +547,7 @@
                             <span class="c-timeline__line"></span>
                           </header>
                     </div>
-                    <div class="col-md-5">
+                    <div class="col-md-5 col-sm-12 res_col_top">
                         <div class="c-timeline">
                             <ul class="c-timeline__list">
                               <li class="c-timeline__item tmln_mdfy">
@@ -564,7 +564,7 @@
                     </div>
                     @endif
                     @if($key == 3)
-                    <div class="col-md-5 text-right">
+                    <div class="col-md-5 text-right col-sm-12 res_col_top">
                         <div class="c-timeline">
                             <ul class="c-timeline__list">
                               <li class="c-timeline__item tmln_mdfy">
@@ -584,17 +584,17 @@
                             <span class="c-timeline__line"></span>
                           </header>
                     </div>
-                    <div class="col-md-5">
+                    <div class="col-md-5 col-sm-12 res_col_bottom">
                         <div class="c-timeline">
                             <ul class="c-timeline__list">
                               <li class="c-timeline__item pe-3">
                                 <div class="row">
-                                    <div class="col-md-2">
+                                    <div class="col-md-2 col-4">
                                         <div class="rec_img">
                                             <img src="{{ asset($achive->photo) }}" alt="">
                                         </div>
                                     </div>
-                                    <div class="col-md-10">
+                                    <div class="col-md-10 col-8">
                                         <div class="rec_text text-left">
                                             <h4 class="c-timeline__heading">{{ $achive->title }}</h4>
                                         <p class="c-timeline__body">{{ $achive->description }}</p>
@@ -607,18 +607,18 @@
                     </div>
                     @endif
                     @if($key == 4)
-                    <div class="col-md-5">
+                    <div class="col-md-5 col-sm-12 res_col_bottom">
                         <div class="c-timeline">
                             <ul class="c-timeline__list">
                               <li class="c-timeline__item pe-3">
                                 <div class="row px-3">
-                                    <div class="col-md-10">
+                                    <div class="col-md-10 col-8">
                                         <div class="rec_text text-right">
                                             <h4 class="c-timeline__heading">{{ $achive->title }}</h4>
                                         <p class="c-timeline__body">{{ $achive->description }}</p>
                                         </div>
                                     </div>
-                                    <div class="col-md-2">
+                                    <div class="col-md-2 col-4">
                                         <div class="rec_img">
                                             <img src="{{ asset($achive->photo) }}" alt="">
                                         </div>
@@ -633,7 +633,7 @@
                             <span class="c-timeline__line"></span>
                           </header>
                     </div>
-                    <div class="col-md-5">
+                    <div class="col-md-5 col-sm-12 res_col_top">
                         <div class="c-timeline">
                             <ul class="c-timeline__list">
                               <li class="c-timeline__item tmln_mdfy">
@@ -650,7 +650,7 @@
                     </div>
                     @endif
                     @endforeach
-                    <div class="col-md-5">
+                    <div class="col-md-5 res_col">
                         <div class="c-timeline">
                             <ul class="c-timeline__list">
                               <li class="c-timeline__item">
@@ -666,12 +666,12 @@
                             </ul>
                         </div>
                     </div>
-                    <div class="col-md-2 marg_ach">
+                    <div class="col-md-2 res_col marg_ach">
                         <header class="c-timeline__header">
                             <span class="c-timeline__line cut_tml_brdr"></span>
                           </header>
                     </div>
-                    <div class="col-md-5">
+                    <div class="col-md-5 res_col">
                         <div class="c-timeline py-4">
                             <ul class="c-timeline__list">
                               <li class="c-timeline__item">
@@ -800,12 +800,12 @@
                             @if(general_setting('app_phone'))
                             <div class="col-md-12 py-2">
                                 <div class="row">
-                                    <div class="col-md-2">
+                                    <div class="col-md-2 col-2">
                                         <div class="contact_ic">
                                             <i class="zmdi zmdi-phone"></i>
                                         </div>
                                     </div>
-                                    <div class="col-md-10">
+                                    <div class="col-md-10 col-10">
                                         <div class="contact_text">
                                             <a href="">{{ general_setting('app_phone') }}</a>
                                         </div>
@@ -816,12 +816,12 @@
                             @if(general_setting('app_email'))
                             <div class="col-md-12 py-2">
                                 <div class="row">
-                                    <div class="col-md-2">
+                                    <div class="col-md-2 col-2">
                                         <div class="contact_ic">
                                             <i class="zmdi zmdi-email"></i>
                                         </div>
                                     </div>
-                                    <div class="col-md-10">
+                                    <div class="col-md-10 col-10">
                                         <div class="contact_text">
                                             <a href="">{{ general_setting('app_email') }}</a>
                                         </div>
@@ -832,12 +832,12 @@
                             @if( general_setting('app_instagram') )
                             <div class="col-md-12 py-2">
                                 <div class="row">
-                                    <div class="col-md-2">
+                                    <div class="col-md-2 col-2">
                                         <div class="contact_ic">
                                             <i class="zmdi zmdi-linkedin"></i>
                                         </div>
                                     </div>
-                                    <div class="col-md-10">
+                                    <div class="col-md-10 col-10">
                                         <div class="contact_text">
                                             <a href="{{ general_setting('app_instagram') }}" target="_blank">@sadiq_iqbal</a>
                                         </div>
@@ -848,12 +848,12 @@
                             @if( general_setting('app_youtube') )
                             <div class="col-md-12 py-2">
                                 <div class="row">
-                                    <div class="col-md-2">
+                                    <div class="col-md-2 col-2">
                                         <div class="contact_ic">
                                             <i class="zmdi zmdi-facebook"></i>
                                         </div>
                                     </div>
-                                    <div class="col-md-10">
+                                    <div class="col-md-10 col-10">
                                         <div class="contact_text">
                                             <a href="{{ general_setting('app_youtube') }}" target="_blank">@sadiq_iqbal</a>
                                         </div>
@@ -864,12 +864,12 @@
                             @if( general_setting('app_fb') )
                             <div class="col-md-12 py-2">
                                 <div class="row">
-                                    <div class="col-md-2">
+                                    <div class="col-md-2 col-2">
                                         <div class="contact_ic">
                                             <i class="zmdi zmdi-twitter"></i>
                                         </div>
                                     </div>
-                                    <div class="col-md-10">
+                                    <div class="col-md-10 col-10">
                                         <div class="contact_text">
                                             <a href="{{ general_setting('app_fb') }}" target="_blank">@sadiq_iqbal</a>
                                         </div>
@@ -880,12 +880,12 @@
                             @if( general_setting('app_address') )
                             <div class="col-md-12 py-2">
                                 <div class="row">
-                                    <div class="col-md-2">
+                                    <div class="col-md-2 col-2">
                                         <div class="contact_ic">
                                             <i class="zmdi zmdi-pin"></i>
                                         </div>
                                     </div>
-                                    <div class="col-md-10">
+                                    <div class="col-md-10 col-10">
                                         <div class="contact_text">
                                             <a href="">{{ general_setting('app_address') }}</a>
                                         </div>
@@ -898,6 +898,7 @@
                     <div class="col-md-6">
                         <div class="card msg_car p-5">
                             <form action="{{ route('apply.store') }}" method="POST" enctype="multipart/form-data">
+                                @csrf
                                 <div class="mb-3">
                                   <label for="name" class="form-label">Name</label>
                                   <input type="text" name="name" class="form-control" id="name">

@@ -88,18 +88,18 @@ ul.gallery-menu li{margin-left: 0;}
 .main-menu {display: none;}
 .header-left {margin-bottom: 10px;text-align: center;}
 .header-right {float: none;text-align: center;}
-.slide-content {margin-bottom: 150px;margin-top: 150px;}
+.slide-content {margin-bottom: 0px;margin-top: 334px;}
 .slide-content h1 {font-size: 44px;}
 .slide-content p {padding-left: 0;padding-right: 0;}
 .slider-item {background-position: center center;background-size: cover;}
 .choose-single.text-center {margin-bottom: 30px;padding: 0 25px;}
 .choose-us-area {padding-bottom: 80px;}
 .titel-text h2 {font-size: 28px;line-height: 34px;}
-.events-tab-top .nav-tabs .nav-link {margin-left: -7px;}
+.events-tab-top .nav-tabs .nav-link {margin-left: 12px;}
 .events-tab-top {margin-bottom: 35px;}
 .tab-image-left {margin-bottom: 0;margin-left: 0;}
 .tab-image-btn a {display: none;}
-.event-single-tab {margin-top: 40px;}
+.event-single-tab {margin-top: 0px;}
 .funfact-area{padding-bottom:80px;}
 .funfact-single {margin-bottom: 40px;text-align: center;}
 .funfact-img {
@@ -159,7 +159,7 @@ ul.gallery-menu li {padding: 8px 12px;margin-left:0;}
 .res-mt-50{margin-top:40px}
 
 .events-tab-top .nav{
-  justify-content: flex-start;
+  justify-content: center;
 }
 .professor-slider .slider-item {
   height: 500px;
@@ -178,13 +178,139 @@ ul.gallery-menu li {padding: 8px 12px;margin-left:0;}
   letter-spacing: 0.1em;
 }
 .professor-slider .slide-content h1{
-  font-size: 34px;
+  font-size: 23px;
   line-height: 34px;
 }
+.about-image{
+    width: 100%;
+    height: 412px;
+}
+.about-image img{
+    width: 317px;
+    height: 319px;
+    left: 0;
+}
+.professor-about .title{
+    font-size: 25px;
+}
+.professor-about p{
+    text-align: justify;
+}
+.event-single-content h5{
+    font-size: 16px;
+}
+.event-single-content p{
+    font-size: 8px !important;
+    line-height: 16px !important;
+}
+.event-single-content{
+    padding: 22px 15px 5px;
+}
+.modal-dialog {
+    max-width: 100%;
+}
+.mdl_hdr_md .modal-title {
+    font-size: 15px !important;
+    text-align: justify;
+}
+.modal-body p {
+    font-size: 12px !important;
+    text-align: justify;
+}
+.msg_car button{
+    padding: 6px 50px;
+}
+.professor-slider .slide-content p{
+    font-size: 13px;
+}
+.follow_me{
+    top: 14%;
+}
+.contact_lc{
+    height: 35px;
+    width: 35px;
+}
+.contact_lc i{
+    font-size: 12px;
+}
 .professor-about .about-image {
-  margin-top: 40px;
+  margin-top: 0px;
+}
+.professor-about .about-content{
+    margin-top: 44px;
+}
+.rese-row {
+    --bs-gutter-x: 0rem;
+}
+.upcom-tab-content {
+    padding: 0px 0;
+}
+.res_col{
+    display: none;
+}
+.marg_ach{
+    display: none;
+}
+/* .res_col_bottom{
+    order: 2;
+}
+.res_col_top{
+    order: 1;
+} */
+.res_ms{
+    margin-left: 0px !important;
+}
+.res_px{
+    padding-right: 0px !important;
+    padding-left: 0px !important;
+}
+.c-timeline__item{
+    padding-bottom: 0px;
+}
+.c-timeline__heading{
+    display: none;
+}
+.rec_img img{
+    transform: unset;
+    margin-top: 8px;
+}
+.rec_text {
+    padding: 0px;
+}
+.rec_text {
+    padding: 0px;
+}
+.tmln_mdfy{
+    display: none;
+}
+.rec_text .c-timeline__body{
+    text-align: justify;
+}
+.c-timeline__item{
+    padding: 14px 0;
+}
+.contact_ic {
+    height: 35px;
+    width: 35px;
+}
+.contact_ic i{
+    font-size: 14px;
 }
 
+.contact_text {
+    margin-top: 0px;
+}
+.contact_text a{
+    font-size: 16px;
+}
+.res-h2{
+    font-size: 36px;
+    line-height: 50px;
+}
+.edu-news-area .nav-pills .nav-link{
+    font-size: 14px;
+    margin: 5px;
+}
 }
 
 /* Large Mobile :480px. */

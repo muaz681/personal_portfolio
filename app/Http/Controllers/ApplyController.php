@@ -11,6 +11,7 @@ use File;
 class ApplyController extends Controller
 {
 
+
     //index
     public function index(){
 
@@ -22,13 +23,27 @@ class ApplyController extends Controller
     // store
     public function store(Request $request){
 
-        Apply::create([
+
+$name=$request->name;
+$email=$request->email;
+$msg=$request->msg;
+
+
+        $details = [
+            'title' => [$name],
+            'body' => [$name,$email,$msg]
+        ];
+    // return new \App\Mail\MyTestMail($details);
+        \Mail::to('muaz68128@gmail.com')->send(new \App\Mail\MyTestMail($details));
+
+Apply::create([
             'name' => $request->name,
             'email' => $request->email,
             'msg' => $request->msg,
             'created_at' => Carbon::now(),
         ]);
 
+        return redirect()->back();
         return view('welcome');
 
     }
