@@ -31,10 +31,10 @@ use App\Http\Controllers\AchiveController;
 
 Route::get('send_mail', function () {
 
-    $details = [
-        'title' => 'Mail from ItSolutionStuff.com',
-        'body' => 'This is for testing email using smtp'
-    ];
+    // $details = [
+    //     'title' => 'Mail from Sadiq Iqbal',
+    //     'body' => 'This is for'
+    // ];
 
     \Mail::to('muaz68128@gmail.com')->send(new \App\Mail\MyTestMail($details));
 

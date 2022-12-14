@@ -5,5 +5,9 @@
         <script src="{{ url('assets/frontend/js/plugins.js') }}"></script>
         <script src="{{ url('assets/frontend/js/main.js') }}"></script>
         <script src="{{ url('assets/frontend/js/slick.min.js') }}"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
 
 

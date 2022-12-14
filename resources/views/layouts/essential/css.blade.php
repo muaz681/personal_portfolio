@@ -10,5 +10,5 @@
         <link rel="stylesheet" href="{{ url('assets/frontend/css/responsive.css') }}">
         <link rel="stylesheet" href="{{ url('assets/frontend/css/slick.css') }}">
         <link rel="stylesheet" href="{{ url('assets/frontend/css/slick-theme.css') }}">
-
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
         <script src="{{ url('assets/frontend/js/vendor/modernizr-2.8.3.min.js') }}"></script>
