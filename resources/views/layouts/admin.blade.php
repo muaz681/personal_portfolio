@@ -16,7 +16,7 @@
     <link rel="shortcut icon" type="image/x-icon" href="" />
     {{-- {{ asset(general_setting('app_favicon')) }} --}}
     <!-- TITLE -->
-    <title>Sscquizcontest Dashboard</title>
+    <title>Prof. MD Sadiq Iqbal Dashboard</title>
 
     <!-- BOOTSTRAP CSS -->
     <link id="style" href="{{ asset('backend_asset') }}/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
@@ -32,7 +32,25 @@
     <!-- JQUERY JS -->
     <script src="{{ asset('backend_asset') }}/js/jquery.min.js"></script>
 
-
+<style>
+    .app-header{
+    background: #F48C06;
+}
+.side-header{
+    height: 68px !important;
+    background: #f48c06 !important;
+}
+.app-sidebar{
+    background-color: #FFF1DF !important;
+}
+.app-sidebar__toggle {
+    border: 1px solid #fff;
+    color: #ffffff !important;
+}
+.app-sidebar__toggle:hover{
+    color: #ffffff !important;
+}
+</style>
 
 
 

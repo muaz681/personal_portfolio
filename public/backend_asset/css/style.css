@@ -3,7 +3,7 @@
 [Master Stylesheet]
 
 Project        :   sash – Bootstrap 5  Admin & Dashboard Template
-Copyright      :   Spruko Technologies Private Limited 
+Copyright      :   Spruko Technologies Private Limited
 Author         :   Spruko
 Author URL     :   https://themeforest.net/user/spruko
 Support	       :   support@spruko.com
@@ -17055,8 +17055,8 @@ table.table-bordered.dataTable thead tr:first-child td {
     display: flex;
     align-items: center;
     justify-content: center;
+    border: 1px solid #fff;
 }
-
 @media (max-width: 991px) {
     .responsive-navbar .collapse.show .dropdown-menu.show {
         left: 5% !important;
@@ -76027,3 +76027,4 @@ textarea.form-control {
 #GeneralSettings table td{
     white-space: initial;
 }
+
