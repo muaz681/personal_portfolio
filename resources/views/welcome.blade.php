@@ -195,7 +195,9 @@
                 </div>
                 <div class="row pt-5 rese-row">
                     {{-- {{ $researches }} --}}
-                    @foreach($researches as $research)
+                    @foreach($researches as $key => $research)
+                    @if($key == 0 || $key <= 2)
+
                     <div class="col-md-4 py-1 col-sm-12">
                         <div class="rese-bg-image" data-aos="flip-left" data-aos-easing="linear" data-aos-duration="1000" style="position: relative; cursor: pointer;" data-bs-toggle="modal" data-bs-target="#example{{ $research->id }}">
                             <img src="{{ asset($research->photo) }}" class="img-fluid" />
@@ -226,11 +228,20 @@
                                     </div>
                                   </div>
                             </div>
-                          </div>
+                        </div>
                         {{--  --}}
                     </div>
+                    @endif
                     @endforeach
-
+                </div>
+                <div class="row pt-4">
+                    <div class="col-md-12">
+                        <div class="see_more_btn text-center">
+                            <a href="{{ route('research_page') }}" class="btn btn-outline-warning">
+                                See More
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -305,6 +316,54 @@
                                                     </ul>
                                                 </div>
                                             </div>
+                                            <div class="col-lg-12">
+                                                @if($schedules)
+                                                <div class="see_more_btn text-center mt-4">
+                                                    <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                                        All Shedule
+                                                    </button>
+                                                </div>
+                                                @endif
+                                                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                    <div class="modal-dialog modal-dialog-scrollable">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header mdl_hdr_md">
+                                                              <h1 class="modal-title fs-5" id="exampleModalScrollableTitle">My Shedule</h1>
+                                                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                            </div>
+                                                            <div class="modal-body">
+                                                                <ul class="nav-tabs" role="tablist">
+                                                                    @foreach($schedules as $key => $schedule)
+                                                                    <?php $date = Date::make($schedule->date)->format('l'); ?>
+                                                                    <?php $day = Lang::get('date.day.'.$date); ?>
+                                                                    @if(App\Models\Schedule::where('date', '<', Carbon\Carbon::now())->each(function ($schedule) {
+                                                                        $schedule->delete();
+                                                                    }))
+                                                                    <li class="nav-item d-block" role="presentation">
+                                                                        <a href="#/" class="nav-link active" data-bs-toggle="tab" data-bs-target="#m1">
+                                                                            <div class="eventtab-single-content">
+                                                                                <div class="event-single-date f-left">
+                                                                                    <span class="event-post-no">{{ $loop->index+1 }}</span>
+                                                                                    <span class="evnet-post-time">{{Date::make($schedule->date)->format('h:i A')}}</span>
+                                                                                </div>
+                                                                                <div class="event-single-content">
+                                                                                    <h5>{{ $schedule->description }}</h5>
+                                                                                    <p>Date : {{ Date::make($schedule->date)->format('d - M') }} Time: {{Date::make($schedule->date)->format('h:i A')}}</p>
+                                                                                </div>
+                                                                            </div>
+                                                                        </a>
+                                                                    </li>
+                                                                    @endif
+                                                                    @endforeach
+                                                                </ul>
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                              <button type="button" class="btn btn-secondary mdl_ft_btn" data-bs-dismiss="modal">Close</button>
+                                                            </div>
+                                                          </div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                             <!-- Event Single Tab Menu Start -->
                                         </div>
                                     </div>
@@ -350,7 +409,8 @@
                         <div class="tab-content" id="pills-tabContent">
                             <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
                                 <div class="row video-ger">
-                                    @foreach($gallerys as $spc)
+                                    @foreach($gallerys as $key => $spc)
+                                    @if($key == 0 || $key <= 5 )
                                     <div class="col-md-4 py-1">
                                         <div class="grid-item">
                                             <div class="gallery-single" data-aos="flip-left" data-aos-easing="linear" data-aos-duration="1000">
@@ -359,13 +419,52 @@
                                             </div>
                                         </div>
                                     </div>
+                                    @endif
                                     @endforeach
                                 </div>
-
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        @if(count($gallerys) == 7)
+                                        <div class="see_more_btn text-center mt-4">
+                                            <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#exampleGallery">
+                                                See More
+                                            </button>
+                                        </div>
+                                        @endif
+                                        <div class="modal fade" id="exampleGallery" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog modal-dialog-scrollable">
+                                                <div class="modal-content">
+                                                    <div class="modal-header mdl_hdr_md">
+                                                      <h1 class="modal-title fs-5" id="exampleModalScrollableTitle">Gallery</h1>
+                                                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <div class="row video-ger">
+                                                            @foreach($gallerys as $spc)
+                                                            <div class="col-md-4 py-1">
+                                                                <div class="grid-item">
+                                                                    <div class="gallery-single" data-aos="flip-left" data-aos-easing="linear" data-aos-duration="1000">
+                                                                        <img src="{{ asset($spc->photo) }}" alt="" />
+                                                                        <a href="{{ asset($spc->photo) }}" class="popup-gallery"><i class="zmdi zmdi-filter-center-focus"></i></a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            @endforeach
+                                                        </div>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                      <button type="button" class="btn btn-secondary mdl_ft_btn" data-bs-dismiss="modal">Close</button>
+                                                    </div>
+                                                  </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                             <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
                                 <div class="row video-ger">
-                                    @foreach($videos as $video)
+                                    @foreach($videos as $key => $video)
+                                    @if($key == 0 || $key <= 5 )
                                     <div class="col-md-4">
                                         <div class="card">
                                             <div class="embed-responsive embed-responsive-16by9" data-aos="flip-left" data-aos-easing="linear" data-aos-duration="1000">
@@ -375,7 +474,47 @@
                                             </div>
                                         </div>
                                     </div>
+                                    @endif
                                     @endforeach
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        @if(count($videos) == 6 )
+                                        <div class="see_more_btn text-center mt-4">
+                                            <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#exampleVideo">
+                                                See More
+                                            </button>
+                                        </div>
+                                        @endif
+                                        <div class="modal fade" id="exampleVideo" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog modal-dialog-scrollable">
+                                                <div class="modal-content">
+                                                    <div class="modal-header mdl_hdr_md">
+                                                      <h1 class="modal-title fs-5" id="exampleModalScrollableTitle">Videos</h1>
+                                                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <div class="row video-ger">
+                                                            @foreach($videos as $video)
+                                                            <div class="col-md-4">
+                                                                <div class="card">
+                                                                    <div class="embed-responsive embed-responsive-16by9" data-aos="flip-left" data-aos-easing="linear" data-aos-duration="1000">
+                                                                        <iframe
+                                                                            src="{{ $video->link }}">
+                                                                        </iframe>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            @endforeach
+                                                        </div>
+                                                    </div>
+                                                    <div class="modal-footer">
+                                                      <button type="button" class="btn btn-secondary mdl_ft_btn" data-bs-dismiss="modal">Close</button>
+                                                    </div>
+                                                  </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>

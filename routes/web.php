@@ -46,6 +46,7 @@ Route::post('store', [ApplyController::class, 'store'])->name('apply.store');
 
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/research', [HomeController::class, 'research_page'])->name('research_page');
 
 Route::get('/clear', function(){
     Artisan::call('optimize');

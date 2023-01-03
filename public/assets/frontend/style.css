@@ -1376,3 +1376,14 @@ p.form-messege {font-size: 20px;margin: 0;}
   z-index: 200;
 }
 #scrollUp:hover{background:#000;}
+/* Extra css */
+
+.see_more_btn .btn{
+    background-color: #f48c06 !important;
+    color: #fff !important;
+    font-size: 18px !important;
+    font-weight: 600 !important;
+}
+.modal_res{
+    max-width: 90% !important;
+}

@@ -15,5 +15,6 @@
     @yield('content')
 
     @include('layouts.essential.js')
+
     </body>
 </html>
