@@ -41,7 +41,7 @@
             <div class="container">
                 <div class="row">
                     <!-- Logo Area Start -->
-                    <div class="col-md-3">
+                    <div class="col-md-2">
                         @if(general_setting('app_logo'))
                         <div class="logo-area">
                             <a href="{{ route('home') }}"><img src="{{ asset(general_setting('app_logo')) }}" alt="" /></a>
@@ -50,7 +50,7 @@
                     </div>
                     <!-- Logo Area End -->
                     <!-- Main Menu Start -->
-                    <div class="col-md-9 col-sm-9">
+                    <div class="col-md-10 col-sm-9">
                         <div class="main-menu text-right">
                             <nav>
                                 <ul>
@@ -163,13 +163,13 @@
                 <div class="row align-items-center">
 
                     <div class="col-md-7 col-12">
-                        <div class="about-image" data-aos="fade-right" data-aos-easing="linear" data-aos-duration="1000">
+                        <div class="about-image" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="500">
                             <img class="img-fluid" src="{{ url( asset(home_content('about_img'))) }}" alt="About Image">
                         </div>
                     </div>
 
                     <div class="col-md-5 col-12">
-                        <div class="about-content" data-aos="fade-left" data-aos-easing="linear" data-aos-duration="1000">
+                        <div class="about-content" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="500">
                             <span class="subtitle">Hello There</span>
                             <h2 class="title">I AM {{ home_content('about_name') }}</h2>
                             <h5 class="content-title">Knowledge is the main factor for beign a Human</h5>
@@ -199,7 +199,7 @@
                     @if($key == 0 || $key <= 2)
 
                     <div class="col-md-4 py-1 col-sm-12">
-                        <div class="rese-bg-image" data-aos="flip-left" data-aos-easing="linear" data-aos-duration="1000" style="position: relative; cursor: pointer;" data-bs-toggle="modal" data-bs-target="#example{{ $research->id }}">
+                        <div class="rese-bg-image" data-aos="flip-left" data-aos-easing="linear" data-aos-duration="500" style="position: relative; cursor: pointer;" data-bs-toggle="modal" data-bs-target="#example{{ $research->id }}">
                             <img src="{{ asset($research->photo) }}" class="img-fluid" />
                             <div class="mask text-light d-flex flex-column text-center">
                               <div class="rscr_icon">
@@ -223,8 +223,18 @@
                                     <div class="modal-body">
                                       <p>{{ $research->description }}</p>
                                     </div>
-                                    <div class="modal-footer">
-                                      <button type="button" class="btn btn-secondary mdl_ft_btn" data-bs-dismiss="modal">Close</button>
+                                    <div class="modal-footer-resc">
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <a href="{{ $research->url }}" target="_blank" class="btn btn-outline-primary">
+                                                    Research Link
+                                                </a>
+                                            </div>
+                                            <div class="col-md-6 text-right">
+                                                <button type="button" class="btn btn-secondary mdl_ft_btn" data-bs-dismiss="modal">Close</button>
+                                            </div>
+                                        </div>
+
                                     </div>
                                   </div>
                             </div>
@@ -267,7 +277,7 @@
                     <div class="col-lg-6">
                         <div class="tab-content upcom-tab-content">
 
-                            <div class="about-content" data-aos="zoom-in" data-aos-easing="linear" data-aos-duration="1000">
+                            <div class="about-content" data-aos="zoom-in" data-aos-easing="linear" data-aos-duration="500">
                                 <div class="content-title">{{ home_content('program_title') }}</div>
                                 <p>{{ home_content('program_description') }}</p>
                                 <div class="slide-btn">
@@ -289,7 +299,7 @@
                                         <div class="row">
                                             <!-- Event Single Tab Menu Start -->
                                             <div class="col-lg-12">
-                                                <div class="event-single-tab" data-aos="zoom-in-up" data-aos-easing="linear" data-aos-duration="1000">
+                                                <div class="event-single-tab" data-aos="zoom-in-up" data-aos-easing="linear" data-aos-duration="500">
                                                     <ul class="nav-tabs" role="tablist">
                                                         @foreach($schedules as $key => $schedule)
                                                         <?php $date = Date::make($schedule->date)->format('l'); ?>
@@ -413,7 +423,7 @@
                                     @if($key == 0 || $key <= 5 )
                                     <div class="col-md-4 py-1">
                                         <div class="grid-item">
-                                            <div class="gallery-single" data-aos="flip-left" data-aos-easing="linear" data-aos-duration="1000">
+                                            <div class="gallery-single" data-aos="flip-left" data-aos-easing="linear" data-aos-duration="500">
                                                 <img src="{{ asset($spc->photo) }}" alt="" />
                                                 <a href="{{ asset($spc->photo) }}" class="popup-gallery"><i class="zmdi zmdi-filter-center-focus"></i></a>
                                             </div>
@@ -443,7 +453,7 @@
                                                             @foreach($gallerys as $spc)
                                                             <div class="col-md-4 py-1">
                                                                 <div class="grid-item">
-                                                                    <div class="gallery-single" data-aos="flip-left" data-aos-easing="linear" data-aos-duration="1000">
+                                                                    <div class="gallery-single" data-aos="flip-left" data-aos-easing="linear" data-aos-duration="500">
                                                                         <img src="{{ asset($spc->photo) }}" alt="" />
                                                                         <a href="{{ asset($spc->photo) }}" class="popup-gallery"><i class="zmdi zmdi-filter-center-focus"></i></a>
                                                                     </div>
@@ -467,7 +477,7 @@
                                     @if($key == 0 || $key <= 5 )
                                     <div class="col-md-4">
                                         <div class="card">
-                                            <div class="embed-responsive embed-responsive-16by9" data-aos="flip-left" data-aos-easing="linear" data-aos-duration="1000">
+                                            <div class="embed-responsive embed-responsive-16by9" data-aos="flip-left" data-aos-easing="linear" data-aos-duration="500">
                                                 <iframe
                                                     src="{{ $video->link }}">
                                                 </iframe>
@@ -575,7 +585,7 @@
                     @foreach($achives as $key => $achive)
                     @if($key == 0)
                     <div class="col-md-5 col-sm-12 res_col_bottom">
-                        <div class="c-timeline" data-aos="fade-right" data-aos-easing="linear" data-aos-duration="1000">
+                        <div class="c-timeline" data-aos="fade-down-right" data-aos-easing="linear" data-aos-duration="500">
                             <ul class="c-timeline__list">
                               <li class="c-timeline__item pe-3">
                                 <div class="row px-3 res_px">
@@ -601,7 +611,7 @@
                           </header>
                     </div>
                     <div class="col-md-5 col-sm-12 res_col_top">
-                        <div class="c-timeline" data-aos="fade-left" data-aos-easing="linear" data-aos-duration="1000">
+                        <div class="c-timeline" data-aos="fade-down-left" data-aos-easing="linear" data-aos-duration="500">
                             <ul class="c-timeline__list">
                               <li class="c-timeline__item tmln_mdfy">
                                 <div class="row">
@@ -618,7 +628,7 @@
                     @endif
                     @if($key == 1)
                     <div class="col-md-5 text-right col-sm-12 res_col_top">
-                        <div class="c-timeline" data-aos="fade-right" data-aos-easing="linear" data-aos-duration="1000">
+                        <div class="c-timeline" data-aos="fade-down-right" data-aos-easing="linear" data-aos-duration="500">
                             <ul class="c-timeline__list">
                               <li class="c-timeline__item tmln_mdfy">
                                 <div class="row px-3">
@@ -638,7 +648,7 @@
                           </header>
                     </div>
                     <div class="col-md-5 col-sm-12 res_col_bottom">
-                        <div class="c-timeline" data-aos="fade-left" data-aos-easing="linear" data-aos-duration="1000">
+                        <div class="c-timeline" data-aos="fade-down-left" data-aos-easing="linear" data-aos-duration="500">
                             <ul class="c-timeline__list">
                               <li class="c-timeline__item pe-3">
                                 <div class="row">
@@ -661,7 +671,7 @@
                     @endif
                     @if($key == 2)
                     <div class="col-md-5 col-sm-12 res_col_bottom">
-                        <div class="c-timeline" data-aos="fade-right" data-aos-easing="linear" data-aos-duration="1000">
+                        <div class="c-timeline" data-aos="fade-down-right" data-aos-easing="linear" data-aos-duration="500">
                             <ul class="c-timeline__list">
                               <li class="c-timeline__item pe-3">
                                 <div class="row px-3">
@@ -687,7 +697,7 @@
                           </header>
                     </div>
                     <div class="col-md-5 col-sm-12 res_col_top">
-                        <div class="c-timeline" data-aos="fade-left" data-aos-easing="linear" data-aos-duration="1000">
+                        <div class="c-timeline" data-aos="fade-down-right" data-aos-easing="linear" data-aos-duration="500">
                             <ul class="c-timeline__list">
                               <li class="c-timeline__item tmln_mdfy">
                                 <div class="row">
@@ -704,7 +714,7 @@
                     @endif
                     @if($key == 3)
                     <div class="col-md-5 text-right col-sm-12 res_col_top">
-                        <div class="c-timeline" data-aos="fade-right" data-aos-easing="linear" data-aos-duration="1000">
+                        <div class="c-timeline" data-aos="fade-down-right" data-aos-easing="linear" data-aos-duration="500">
                             <ul class="c-timeline__list">
                               <li class="c-timeline__item tmln_mdfy">
                                 <div class="row px-3">
@@ -724,7 +734,7 @@
                           </header>
                     </div>
                     <div class="col-md-5 col-sm-12 res_col_bottom">
-                        <div class="c-timeline" data-aos="fade-left" data-aos-easing="linear" data-aos-duration="1000">
+                        <div class="c-timeline" data-aos="fade-down-left" data-aos-easing="linear" data-aos-duration="500">
                             <ul class="c-timeline__list">
                               <li class="c-timeline__item pe-3">
                                 <div class="row">
@@ -747,7 +757,7 @@
                     @endif
                     @if($key == 4)
                     <div class="col-md-5 col-sm-12 res_col_bottom">
-                        <div class="c-timeline" data-aos="fade-right" data-aos-easing="linear" data-aos-duration="1000">
+                        <div class="c-timeline" data-aos="fade-down-right" data-aos-easing="linear" data-aos-duration="500">
                             <ul class="c-timeline__list">
                               <li class="c-timeline__item pe-3">
                                 <div class="row px-3">
@@ -773,7 +783,7 @@
                           </header>
                     </div>
                     <div class="col-md-5 col-sm-12 res_col_top">
-                        <div class="c-timeline" data-aos="fade-left" data-aos-easing="linear" data-aos-duration="1000">
+                        <div class="c-timeline" data-aos="fade-down-left" data-aos-easing="linear" data-aos-duration="500">
                             <ul class="c-timeline__list">
                               <li class="c-timeline__item tmln_mdfy">
                                 <div class="row">
@@ -851,7 +861,7 @@
                         <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
                             @foreach($seminars as $key => $seminar)
                             @if($key == 0)
-                            <button class="nav-link active" data-aos="flip-left" data-aos-easing="linear" data-aos-duration="1000" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">
+                            <button class="nav-link active" data-aos="flip-left" data-aos-easing="linear" data-aos-duration="500" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">
                                 <div class="flex">
                                     <i class="zmdi zmdi-card-travel"></i>
                                     <span class="seminar_spa">{{ $seminar->title }}</span>
@@ -860,7 +870,7 @@
                             </button>
                             @endif
                             @if($key != 0)
-                            <button class="nav-link" data-aos="flip-left" data-aos-easing="linear" data-aos-duration="1000" id="v-pills-{{ $seminar->id }}-tab" data-bs-toggle="pill" data-bs-target="#v-pills-{{ $seminar->id }}" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">
+                            <button class="nav-link" data-aos="flip-left" data-aos-easing="linear" data-aos-duration="500" id="v-pills-{{ $seminar->id }}-tab" data-bs-toggle="pill" data-bs-target="#v-pills-{{ $seminar->id }}" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">
                                 <div class="flex">
                                     <i class="zmdi zmdi-card-travel"></i>
                                     <span class="seminar_spa">{{ $seminar->title }}</span>
@@ -878,12 +888,12 @@
                             <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab" tabindex="0">
                                 <div class="row">
                                     <div class="col-md-7">
-                                        <div class="seminar_img" data-aos="zoom-in" data-aos-easing="linear" data-aos-duration="1000">
+                                        <div class="seminar_img" data-aos="zoom-in" data-aos-easing="linear" data-aos-duration="500">
                                             <img src="{{ asset($seminar->photo) }}" alt="">
                                         </div>
                                     </div>
                                     <div class="col-md-5">
-                                        <div class="seminar_des pt-5" data-aos="flip-right" data-aos-easing="linear" data-aos-duration="1000">
+                                        <div class="seminar_des pt-5" data-aos="flip-right" data-aos-easing="linear" data-aos-duration="500">
                                             <p>
                                                 {{ $seminar->description }}
                                             </p>
@@ -896,12 +906,12 @@
                             <div class="tab-pane fade" id="v-pills-{{ $seminar->id }}" role="tabpanel" aria-labelledby="v-pills-{{ $seminar->id }}-tab" tabindex="0">
                                 <div class="row">
                                     <div class="col-md-7">
-                                        <div class="seminar_img" data-aos="zoom-in" data-aos-easing="linear" data-aos-duration="1000">
+                                        <div class="seminar_img" data-aos="zoom-in" data-aos-easing="linear" data-aos-duration="500">
                                             <img src="{{ asset($seminar->photo) }}" alt="">
                                         </div>
                                     </div>
                                     <div class="col-md-5">
-                                        <div class="seminar_des pt-5" data-aos="flip-right" data-aos-easing="linear" data-aos-duration="1000">
+                                        <div class="seminar_des pt-5" data-aos="flip-right" data-aos-easing="linear" data-aos-duration="500">
                                             <p>
                                                 {{ $seminar->description }}
                                             </p>

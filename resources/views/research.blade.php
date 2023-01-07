@@ -37,8 +37,18 @@
                                 <div class="modal-body">
                                   <p>{{ $research->description }}</p>
                                 </div>
-                                <div class="modal-footer">
-                                  <button type="button" class="btn btn-secondary mdl_ft_btn" data-bs-dismiss="modal">Close</button>
+                                <div class="modal-footer-resc">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <a href="{{ $research->url }}" target="_blank" class="btn btn-outline-primary">
+                                                Research Link
+                                            </a>
+                                        </div>
+                                        <div class="col-md-6 text-right">
+                                            <button type="button" class="btn btn-secondary mdl_ft_btn" data-bs-dismiss="modal">Close</button>
+                                        </div>
+                                    </div>
+
                                 </div>
                               </div>
                         </div>
