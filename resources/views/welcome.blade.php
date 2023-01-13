@@ -4,38 +4,7 @@
 <div class="page-wraper" id="main-home">
     <!-- Header Area Start -->
     <header>
-        <!-- Header Top Area Start -->
-        {{-- <div class="header-top-area default-bg ptb-10">
-            <div class="container">
-                <div class="row">
-                    <!-- Header Top left social Start -->
-                    <div class="col-md-6">
-                        <div class="header-left">
-                            <p>Have any question? {{ general_setting('app_phone') }}</p>
-                        </div>
-                    </div>
-                    <!-- Header Top left social End -->
-                    <!-- Header Top right social Start -->
-                    <div class="col-md-6">
-                        <div class="header-right f-right">
-                            <ul>
-                                @if(general_setting('app_fb'))
-                                <li><a href="{{ general_setting('app_fb') }}"><i class="zmdi zmdi-facebook"></i></a></li>
-                                @endif
-                                @if(general_setting('app_instagram'))
-                                <li><a href="{{ general_setting('app_instagram') }}"><i class="zmdi zmdi-linkedin"></i></a></li>
-                                @endif
-                                @if(general_setting('app_youtube'))
-                                <li><a href="{{ general_setting('app_youtube') }}"><i class="zmdi zmdi-twitter"></i></a></li>
-                                @endif
-                            </ul>
-                        </div>
-                    </div>
-                    <!-- Header Top right social End -->
-                </div>
-            </div>
-        </div> --}}
-        <!-- Header Top Area End -->
+
         <!-- Header Menu Area Start -->
         <div class="menu-area-main" id="sticky-header">
             <div class="container">
@@ -76,32 +45,6 @@
                     <!-- Main Menu End -->
                 </div>
             </div>
-            <!-- MOBILE-MENU-AREA START -->
-            {{-- <div class="mobile-menu-area">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <div class="mobile-area">
-                                <div class="mobile-menu">
-                                    <nav id="mobile-nav">
-                                        <ul>
-                                            <li class="active"><a href="index.html">home</a>
-                                            </li>
-                                            <li><a href="about-us.html">ABOUT US</a></li>
-                                            <li><a href="news.html">News</a>
-                                            </li>
-                                            <li><a href="#">PAGES</a>
-                                            </li>
-                                            <li><a href="#contact_part">CONTACT US</a></li>
-                                        </ul>
-                                    </nav>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div> --}}
-            <!-- MOBILE-MENU-AREA END  -->
         </div>
         <!-- Header Menu Area End -->
     </header>
@@ -119,14 +62,16 @@
                         <div class="row">
                             <div class="slide-content col-lg-6 col-md-6 col-xs-12">
                                 <h1>{{ $banner->banner_description }}</h1>
-                                <p>I have more than 35 years of exprience more than enough obtain itself, because it is  pain, but because occasionally circumstances occur</p>
+                                <p>
+                                    Associate Professor and Head, Department of computer Science & Engineering, Facculty of Science, Engineering & Technology, Bangladesh University, Dhaka
+                                    </p>
                             </div>
                             <div class="col-md-6 col-lg-6">
                                 <div class="follow_me">
                                     @if(general_setting('app_fb'))
                                     <div class="contact_lc my-2">
                                         <a href="{{ general_setting('app_fb') }}">
-                                            <i class="zmdi zmdi-facebook"></i>
+                                            <i class="zmdi zmdi-twitter"></i>
                                         </a>
                                     </div>
                                     @endif
@@ -140,7 +85,7 @@
                                     @if(general_setting('app_youtube'))
                                     <div class="contact_lc my-2">
                                         <a href="{{ general_setting('app_youtube') }}">
-                                            <i class="zmdi zmdi-twitter"></i>
+                                            <i class="zmdi zmdi-facebook"></i>
                                         </a>
                                     </div>
                                     @endif
@@ -161,21 +106,22 @@
         <section class="professor-about ptb-110" id="about_part">
             <div class="container">
                 <div class="row align-items-center">
-
+                    {{-- data-aos="fade-up" data-aos-easing="linear" data-aos-duration="500"
+                    data-aos="fade-down" data-aos-easing="linear" data-aos-duration="500" --}}
                     <div class="col-md-7 col-12">
-                        <div class="about-image" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="500">
+                        <div class="about-image">
                             <img class="img-fluid" src="{{ url( asset(home_content('about_img'))) }}" alt="About Image">
                         </div>
                     </div>
 
                     <div class="col-md-5 col-12">
-                        <div class="about-content" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="500">
+                        <div class="about-content">
                             <span class="subtitle">Hello There</span>
                             <h2 class="title">I AM {{ home_content('about_name') }}</h2>
                             <h5 class="content-title">Knowledge is the main factor for beign a Human</h5>
-                            <p>{{ home_content('about_description') }}</p>
+                            <p>{!! home_content('about_description') !!}</p>
                             <div class="slide-btn">
-                                <a href="#contact_part">Contact Now</a>
+                                <!--<a href="#contact_part">Contact Now</a>-->
                             </div>
                         </div>
                     </div>
@@ -193,12 +139,12 @@
                         </h2>
                     </div>
                 </div>
-                <div class="row pt-5 rese-row">
+                <div class="row rese-row">
                     {{-- {{ $researches }} --}}
                     @foreach($researches as $key => $research)
-                    @if($key == 0 || $key <= 2)
+                    @if($key == 0 || $key <= 3)
 
-                    <div class="col-md-4 py-1 col-sm-12">
+                    <div class="col-md-3 py-1 col-sm-12">
                         <div class="rese-bg-image" data-aos="flip-left" data-aos-easing="linear" data-aos-duration="500" style="position: relative; cursor: pointer;" data-bs-toggle="modal" data-bs-target="#example{{ $research->id }}">
                             <img src="{{ asset($research->photo) }}" class="img-fluid" />
                             <div class="mask text-light d-flex flex-column text-center">
@@ -271,7 +217,7 @@
         </section>
         <section class="upcoming-event-section">
             <div class="container">
-                <div class="row py-5">
+                <div class="row py-2">
                     <!-- Section Title Left -->
                     <!-- Event Single Content Start -->
                     <div class="col-lg-6">
@@ -292,7 +238,7 @@
                     <div class="col-lg-6">
                         {{-- {{ $schedules }} --}}
                         <div class="row">
-                            <div class="col-lg-12 pt-5">
+                            <div class="col-lg-12 py-5">
                                 <div class="tab-content">
                                     <!-- Event Top Single Strat -->
                                     <div class="tab-pane fade show active" id="event-one">
@@ -400,7 +346,7 @@
                 </div>
                 <div class="row">
                     {{--  --}}
-                    <div class="col-lg-12 py-5 events-tab-top">
+                    <div class="col-lg-12 py-1 events-tab-top">
                         <ul class="nav nav-tabs mb-3" id="pills-tab" role="tablist">
                             <li class="nav-item" role="presentation">
                               <a href="#" class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">
@@ -418,7 +364,7 @@
                     <div class="col-lg-12">
                         <div class="tab-content" id="pills-tabContent">
                             <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
-                                <div class="row video-ger">
+                                {{-- <div class="row video-ger">
                                     @foreach($gallerys as $key => $spc)
                                     @if($key == 0 || $key <= 5 )
                                     <div class="col-md-4 py-1">
@@ -431,10 +377,76 @@
                                     </div>
                                     @endif
                                     @endforeach
+                                </div> --}}
+                                {{-- Experiment --}}
+                                <div class="row video-ger">
+                                    <div class="col-md-4">
+                                        <div class="row">
+                                            @foreach($gallerys as $key => $spc)
+                                            @if($key == 0 )
+                                            <div class="col-md-12 py-1">
+                                                <div class="grid-item">
+                                                    <div class="gallery-single" data-aos="flip-left" data-aos-easing="linear" data-aos-duration="500">
+                                                        <img src="{{ asset($spc->photo) }}" class="img-fluid img_left" alt="" />
+                                                        <a href="{{ asset($spc->photo) }}" class="popup-gallery"><i class="zmdi zmdi-filter-center-focus"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            @endif
+                                            @endforeach
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="row">
+                                            @foreach($gallerys as $key => $spc)
+                                            @if($key == 1 )
+                                            <div class="col-md-12 py-1">
+                                                <div class="grid-item">
+                                                    <div class="gallery-single" data-aos="flip-left" data-aos-easing="linear" data-aos-duration="500">
+                                                        <img src="{{ asset($spc->photo) }}" class="img-fluid img_mdle" alt="" />
+                                                        <a href="{{ asset($spc->photo) }}" class="popup-gallery"><i class="zmdi zmdi-filter-center-focus"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            @endif
+                                            @endforeach
+                                        </div>
+                                        <div class="row">
+                                            @foreach($gallerys as $key => $spc)
+                                            @if($key == 2 )
+                                            <div class="col-md-12 py-1">
+                                                <div class="grid-item">
+                                                    <div class="gallery-single" data-aos="flip-left" data-aos-easing="linear" data-aos-duration="500">
+                                                        <img src="{{ asset($spc->photo) }}" class="img-fluid img_mdle" alt="" />
+                                                        <a href="{{ asset($spc->photo) }}" class="popup-gallery"><i class="zmdi zmdi-filter-center-focus"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            @endif
+                                            @endforeach
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="row">
+                                            @foreach($gallerys as $key => $spc)
+                                            @if($key == 2 )
+                                            <div class="col-md-12 py-1">
+                                                <div class="grid-item">
+                                                    <div class="gallery-single" data-aos="flip-left" data-aos-easing="linear" data-aos-duration="500">
+                                                        <img src="{{ asset($spc->photo) }}" class="img-fluid img_right" alt="" />
+                                                        <a href="{{ asset($spc->photo) }}" class="popup-gallery"><i class="zmdi zmdi-filter-center-focus"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            @endif
+                                            @endforeach
+                                        </div>
+                                    </div>
                                 </div>
+                                {{-- Experiment end --}}
                                 <div class="row">
                                     <div class="col-md-12">
-                                        @if(count($gallerys) == 7)
+                                        @if($gallerys)
                                         <div class="see_more_btn text-center mt-4">
                                             <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#exampleGallery">
                                                 See More
@@ -535,7 +547,7 @@
         <!-- Photo Gallery Area End -->
 
         <!-- Achivement Area Start -->
-        <section class="subcribe-area ptb-110" id="Achivement_part">
+        <section class="subcribe-area" id="Achivement_part">
             <div class="container">
                 <div class="row">
                     <!-- Section Title Left -->
@@ -545,7 +557,7 @@
                         </h2>
                     </div>
                 </div>
-                <div class="row pt-5 ms-5 res_ms">
+                <div class="row res_ms res_just">
                     <div class="col-md-5 res_col">
                         <div class="c-timeline">
                             <ul class="c-timeline__list">

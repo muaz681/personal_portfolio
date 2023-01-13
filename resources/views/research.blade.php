@@ -12,7 +12,7 @@
             <div class="row pt-5 rese-row">
                 {{-- {{ $researches }} --}}
                 @foreach($researches as $research)
-                <div class="col-md-4 py-1 col-sm-12">
+                <div class="col-md-3 py-1 col-sm-12">
                     <div class="rese-bg-image" data-aos="flip-left" data-aos-easing="linear" data-aos-duration="1000" style="position: relative; cursor: pointer;" data-bs-toggle="modal" data-bs-target="#example{{ $research->id }}">
                         <img src="{{ asset($research->photo) }}" class="img-fluid" />
                         <div class="mask text-light d-flex flex-column text-center">
