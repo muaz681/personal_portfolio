@@ -119,10 +119,11 @@
     background-size: cover;
 }
 .color-gr{
-    background-image: linear-gradient(to left, rgb(49 44 44 / 28%), rgb(46 41 41 / 90%));
-    background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
-    height: 100vh;
+    height: 80vh;
+    width: 100%;
     position: relative;
+    background: rgb(2,2,5);
+    background: linear-gradient(90deg, rgba(2,2,5,0.9248949579831933) 0%, rgba(4,3,3,0.8352591036414566) 60%, rgba(66,67,68,0.46271008403361347) 100%);
 }

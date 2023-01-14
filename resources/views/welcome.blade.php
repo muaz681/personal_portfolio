@@ -238,7 +238,7 @@
                     <div class="col-lg-6">
                         {{-- {{ $schedules }} --}}
                         <div class="row">
-                            <div class="col-lg-12 py-5">
+                            <div class="col-lg-12">
                                 <div class="tab-content">
                                     <!-- Event Top Single Strat -->
                                     <div class="tab-pane fade show active" id="event-one">
@@ -905,7 +905,7 @@
                                         </div>
                                     </div>
                                     <div class="col-md-5">
-                                        <div class="seminar_des pt-5" data-aos="flip-right" data-aos-easing="linear" data-aos-duration="500">
+                                        <div class="seminar_des" data-aos="flip-right" data-aos-easing="linear" data-aos-duration="500">
                                             <p>
                                                 {{ $seminar->description }}
                                             </p>
@@ -923,7 +923,7 @@
                                         </div>
                                     </div>
                                     <div class="col-md-5">
-                                        <div class="seminar_des pt-5" data-aos="flip-right" data-aos-easing="linear" data-aos-duration="500">
+                                        <div class="seminar_des" data-aos="flip-right" data-aos-easing="linear" data-aos-duration="500">
                                             <p>
                                                 {{ $seminar->description }}
                                             </p>
@@ -1057,7 +1057,7 @@
                         </div>
                     </div>
                     <div class="col-md-6">
-                        <div class="card msg_car p-5" data-aos="zoom-in" data-aos-easing="linear" data-aos-duration="1000">
+                        <div class="card msg_car" data-aos="zoom-in" data-aos-easing="linear" data-aos-duration="1000">
                             <form action="{{ route('apply.store') }}" method="POST" enctype="multipart/form-data">
                                 @csrf
                                 <div class="mb-3">

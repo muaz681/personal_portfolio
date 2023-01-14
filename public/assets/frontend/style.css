@@ -1426,6 +1426,15 @@ p.form-messege {font-size: 20px;margin: 0;}
 .img_mdle{
     height: 270px;
 }
+.tab-content{
+    padding-top: 20px;
+}
+.seminar_des{
+    padding-top: 20px;
+}
+.msg_car{
+    padding: 20px;
+}
 
 /* Experment */
 
