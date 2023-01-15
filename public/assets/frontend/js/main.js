@@ -26,10 +26,10 @@
 		items:1,
 		margin:0,
 		// autoHeight:true,
-        // autoplay:true,
-        // autoplayTimeout:6000,
+        autoplay:true,
+        autoplayTimeout:8000,
 		dots:false,
-        // loop:true,
+        loop:true,
 	});
 
 	/*------ 03. Department Active ------*/

@@ -268,8 +268,9 @@
     line-height: 81px;
     /* identical to box height */
     color: #F48C06;
-    text-align: center;
+    text-align: left;
     text-transform: capitalize;
+    margin-left: 42px;
 }
 .res-span{
     color: #000;
@@ -547,7 +548,7 @@
     color: #000;
     font-style: normal;
     font-weight: 500;
-    font-size: 20px;
+    font-size: 16px;
     margin: 15px;
     font-family: 'Montserrat', sans-serif;
 }
@@ -561,7 +562,7 @@
 }
 .seminar_img img{
     width: 464px;
-    height: 473px;
+    height: 300px;
 }
 .seminar_des p{
     font-weight: 400;
@@ -579,6 +580,7 @@
     width: 50px;
     border-radius: 50%;
     position: relative;
+    margin-left: auto;
 }
 .contact_ic i{
     position: absolute;
@@ -599,7 +601,7 @@
     height: 444px;
     position: absolute;
     bottom: 0;
-    left: 10%;
+    right: 0;
 }
 .rscr_icon{
     width: 40px;
@@ -608,6 +610,7 @@
     border-radius: 50%;
     position: relative;
     margin: 0 auto;
+    margin-top: 15px;
 }
 .rscr_arr_icon{
     width: 40px;
@@ -671,7 +674,7 @@
     color: #fff;
 }
 .contact_text{
-    margin-top: 8px;
+    margin-top: 4px;
 }
 .contact_text a{
     font-style: normal;
@@ -691,10 +694,13 @@
 .msg_car button{
     display: flex;
     align-items: center;
-    text-align: center;
-    margin: auto;
+    text-align: left;
+    /* margin: auto; */
     padding: 6px 120px;
     color: #fff;
+    background-color: #f48c06 !important;
+    font-size: 18px;
+    font-weight: 600 !important;
 }
 .msg_car label{
     font-style: normal;
@@ -949,7 +955,6 @@ ul.gallery-menu li.active,ul.gallery-menu li:hover{
     color: #202020;
 }
 .professor-about p {
-  margin-bottom: 40px;
   color: #000;
 }
 /* ============= 15. News Page ============= */
@@ -1375,10 +1380,10 @@ p.form-messege {font-size: 20px;margin: 0;}
 
 /* ============= 20. ScrollUp ============= */
 #scrollUp {
-  background: #5950f7 none repeat scroll 0 0;
-  border-radius: 0px;
-  bottom: 15px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    background: #f48c06 none repeat scroll 0 0;
+    border-radius: 0px;
+    bottom: 15px;
+    box-shadow: 0 0 10px rgb(0 0 0 / 30%);
   color: #fff;
   font-size: 28px;
   height: 40px;
@@ -1389,6 +1394,7 @@ p.form-messege {font-size: 20px;margin: 0;}
   transition: all 0.3s ease 0s;
   width: 40px;
   z-index: 200;
+  border-radius: 2px;
 }
 #scrollUp:hover{background:#000;}
 /* Extra css */
@@ -1398,6 +1404,7 @@ p.form-messege {font-size: 20px;margin: 0;}
     color: #fff !important;
     font-size: 18px !important;
     font-weight: 600 !important;
+    padding: 5px 48px;
 }
 .modal_res{
     max-width: 90% !important;
@@ -1412,8 +1419,9 @@ p.form-messege {font-size: 20px;margin: 0;}
 }
 .gallery-single img{
     width: -webkit-fill-available;
-    box-shadow: -3px 5px 15px #000;
+    box-shadow: -3px 5px 15px #00000057;
 }
+
 .res_just{
     justify-content: center !important;
 }
@@ -1430,10 +1438,19 @@ p.form-messege {font-size: 20px;margin: 0;}
     padding-top: 20px;
 }
 .seminar_des{
-    padding-top: 20px;
+    padding-top: 0px;
 }
 .msg_car{
-    padding: 20px;
+    padding: 40px 20px;
+}
+.slide-content span{
+    color: #f48c06;
+}
+.slide-content a{
+    color: #f48c06;
+}
+.abt_mdl_dlg{
+    max-width: 40% !important;
 }
 
 /* Experment */

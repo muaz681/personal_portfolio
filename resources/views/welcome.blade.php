@@ -63,7 +63,12 @@
                             <div class="slide-content col-lg-6 col-md-6 col-xs-12">
                                 <h1>{{ $banner->banner_description }}</h1>
                                 <p>
-                                    Associate Professor and Head, Department of computer Science & Engineering, Facculty of Science, Engineering & Technology, Bangladesh University, Dhaka
+                                    Chairman, Department of Computer Science & Engineering
+                                    <br>
+                                    <span>Faculty</span> of Science, Engineering Technology
+                                    <br>
+                                    <a href="https://bu.edu.bd/" target="_blank">Bangladesh University</a>
+
                                     </p>
                             </div>
                             <div class="col-md-6 col-lg-6">
@@ -120,8 +125,20 @@
                             <h2 class="title">I AM {{ home_content('about_name') }}</h2>
                             <h5 class="content-title">Knowledge is the main factor for beign a Human</h5>
                             <p>{!! home_content('about_description') !!}</p>
-                            <div class="slide-btn">
-                                <!--<a href="#contact_part">Contact Now</a>-->
+                            <div class="see_more_btn">
+                                <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#abouModal">See More</button>
+                            </div>
+                            <div class="modal fade" id="abouModal" tabindex="-1" aria-labelledby="aboutModalLabel" aria-hidden="true">
+                                <div class="modal-dialog abt_mdl_dlg modal-dialog-scrollable">
+                                    <div class="modal-content">
+                                        <div class="modal-body">
+                                            <p>{!! home_content('about_description') !!}</p>
+                                        </div>
+                                        <div class="modal-footer">
+                                          <button type="button" class="btn btn-secondary mdl_ft_btn" data-bs-dismiss="modal">Close</button>
+                                        </div>
+                                      </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -197,6 +214,7 @@
                                 See More
                             </a>
                         </div>
+
                     </div>
                 </div>
             </div>
@@ -247,7 +265,7 @@
                                             <div class="col-lg-12">
                                                 <div class="event-single-tab" data-aos="zoom-in-up" data-aos-easing="linear" data-aos-duration="500">
                                                     <ul class="nav-tabs" role="tablist">
-                                                        @foreach($schedules as $key => $schedule)
+                                                        @forelse($schedules as $key => $schedule)
                                                         <?php $date = Date::make($schedule->date)->format('l'); ?>
                                                         <?php $day = Lang::get('date.day.'.$date); ?>
                                                         @if(App\Models\Schedule::where('date', '<', Carbon\Carbon::now())->each(function ($schedule) {
@@ -268,12 +286,23 @@
                                                             </a>
                                                         </li>
                                                         @endif
-                                                        @endforeach
+                                                        @empty
+                                                        <li class="nav-item d-block" role="presentation">
+                                                            <a href="#/" class="nav-link active" data-bs-toggle="tab" data-bs-target="#m1">
+                                                                <div class="eventtab-single-content">
+                                                                    <div class="event-single-content">
+                                                                        <p>There is no data available.</p>
+                                                                    </div>
+                                                                </div>
+                                                            </a>
+                                                        </li>
+                                                        @endforelse
                                                     </ul>
                                                 </div>
                                             </div>
                                             <div class="col-lg-12">
-                                                @if($schedules)
+
+                                                @if($schedules->count())
                                                 <div class="see_more_btn text-center mt-4">
                                                     <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#exampleModal">
                                                         All Shedule
@@ -289,7 +318,7 @@
                                                             </div>
                                                             <div class="modal-body">
                                                                 <ul class="nav-tabs" role="tablist">
-                                                                    @foreach($schedules as $key => $schedule)
+                                                                    @forelse($schedules as $key => $schedule)
                                                                     <?php $date = Date::make($schedule->date)->format('l'); ?>
                                                                     <?php $day = Lang::get('date.day.'.$date); ?>
                                                                     @if(App\Models\Schedule::where('date', '<', Carbon\Carbon::now())->each(function ($schedule) {
@@ -310,7 +339,17 @@
                                                                         </a>
                                                                     </li>
                                                                     @endif
-                                                                    @endforeach
+                                                                    @empty
+                                                                    <li class="nav-item d-block" role="presentation">
+                                                                        <a href="#/" class="nav-link active" data-bs-toggle="tab" data-bs-target="#m1">
+                                                                            <div class="eventtab-single-content">
+                                                                                <div class="event-single-content">
+                                                                                    <p>There is no data available.</p>
+                                                                                </div>
+                                                                            </div>
+                                                                        </a>
+                                                                    </li>
+                                                                    @endforelse
                                                                 </ul>
                                                             </div>
                                                             <div class="modal-footer">
@@ -597,7 +636,7 @@
                     @foreach($achives as $key => $achive)
                     @if($key == 0)
                     <div class="col-md-5 col-sm-12 res_col_bottom">
-                        <div class="c-timeline" data-aos="fade-down-right" data-aos-easing="linear" data-aos-duration="500">
+                        <div class="c-timeline" data-aos="fade-right" data-aos-easing="linear" data-aos-duration="500">
                             <ul class="c-timeline__list">
                               <li class="c-timeline__item pe-3">
                                 <div class="row px-3 res_px">
@@ -619,11 +658,11 @@
                     </div>
                     <div class="col-md-2 marg_ach">
                         <header class="c-timeline__header">
-                            <span class="c-timeline__line" data-aos="fade-right" data-aos-easing="linear" data-aos-duration="1000"></span>
+                            <span class="c-timeline__line"></span>
                           </header>
                     </div>
                     <div class="col-md-5 col-sm-12 res_col_top">
-                        <div class="c-timeline" data-aos="fade-down-left" data-aos-easing="linear" data-aos-duration="500">
+                        <div class="c-timeline" data-aos="fade-left" data-aos-easing="linear" data-aos-duration="500">
                             <ul class="c-timeline__list">
                               <li class="c-timeline__item tmln_mdfy">
                                 <div class="row">
@@ -640,7 +679,7 @@
                     @endif
                     @if($key == 1)
                     <div class="col-md-5 text-right col-sm-12 res_col_top">
-                        <div class="c-timeline" data-aos="fade-down-right" data-aos-easing="linear" data-aos-duration="500">
+                        <div class="c-timeline" data-aos="fade-right" data-aos-easing="linear" data-aos-duration="500">
                             <ul class="c-timeline__list">
                               <li class="c-timeline__item tmln_mdfy">
                                 <div class="row px-3">
@@ -656,11 +695,11 @@
                     </div>
                     <div class="col-md-2 marg_ach">
                         <header class="c-timeline__header">
-                            <span class="c-timeline__line" data-aos="fade-left" data-aos-easing="linear" data-aos-duration="1000"></span>
-                          </header>
+                            <span class="c-timeline__line"></span>
+                        </header>
                     </div>
                     <div class="col-md-5 col-sm-12 res_col_bottom">
-                        <div class="c-timeline" data-aos="fade-down-left" data-aos-easing="linear" data-aos-duration="500">
+                        <div class="c-timeline" data-aos="fade-left" data-aos-easing="linear" data-aos-duration="500">
                             <ul class="c-timeline__list">
                               <li class="c-timeline__item pe-3">
                                 <div class="row">
@@ -683,7 +722,7 @@
                     @endif
                     @if($key == 2)
                     <div class="col-md-5 col-sm-12 res_col_bottom">
-                        <div class="c-timeline" data-aos="fade-down-right" data-aos-easing="linear" data-aos-duration="500">
+                        <div class="c-timeline" data-aos="fade-right" data-aos-easing="linear" data-aos-duration="500">
                             <ul class="c-timeline__list">
                               <li class="c-timeline__item pe-3">
                                 <div class="row px-3">
@@ -705,11 +744,11 @@
                     </div>
                     <div class="col-md-2 marg_ach">
                         <header class="c-timeline__header">
-                            <span class="c-timeline__line" data-aos="fade-right" data-aos-easing="linear" data-aos-duration="1000"></span>
-                          </header>
+                            <span class="c-timeline__line"></span>
+                        </header>
                     </div>
                     <div class="col-md-5 col-sm-12 res_col_top">
-                        <div class="c-timeline" data-aos="fade-down-right" data-aos-easing="linear" data-aos-duration="500">
+                        <div class="c-timeline" data-aos="fade-right" data-aos-easing="linear" data-aos-duration="500">
                             <ul class="c-timeline__list">
                               <li class="c-timeline__item tmln_mdfy">
                                 <div class="row">
@@ -726,7 +765,7 @@
                     @endif
                     @if($key == 3)
                     <div class="col-md-5 text-right col-sm-12 res_col_top">
-                        <div class="c-timeline" data-aos="fade-down-right" data-aos-easing="linear" data-aos-duration="500">
+                        <div class="c-timeline" data-aos="fade-right" data-aos-easing="linear" data-aos-duration="500">
                             <ul class="c-timeline__list">
                               <li class="c-timeline__item tmln_mdfy">
                                 <div class="row px-3">
@@ -742,11 +781,11 @@
                     </div>
                     <div class="col-md-2 marg_ach">
                         <header class="c-timeline__header">
-                            <span class="c-timeline__line" data-aos="fade-left" data-aos-easing="linear" data-aos-duration="1000"></span>
+                            <span class="c-timeline__line"></span>
                           </header>
                     </div>
                     <div class="col-md-5 col-sm-12 res_col_bottom">
-                        <div class="c-timeline" data-aos="fade-down-left" data-aos-easing="linear" data-aos-duration="500">
+                        <div class="c-timeline" data-aos="fade-left" data-aos-easing="linear" data-aos-duration="500">
                             <ul class="c-timeline__list">
                               <li class="c-timeline__item pe-3">
                                 <div class="row">
@@ -769,7 +808,7 @@
                     @endif
                     @if($key == 4)
                     <div class="col-md-5 col-sm-12 res_col_bottom">
-                        <div class="c-timeline" data-aos="fade-down-right" data-aos-easing="linear" data-aos-duration="500">
+                        <div class="c-timeline" data-aos="fade-right" data-aos-easing="linear" data-aos-duration="500">
                             <ul class="c-timeline__list">
                               <li class="c-timeline__item pe-3">
                                 <div class="row px-3">
@@ -791,11 +830,11 @@
                     </div>
                     <div class="col-md-2 marg_ach">
                         <header class="c-timeline__header">
-                            <span class="c-timeline__line" data-aos="fade-right" data-aos-easing="linear" data-aos-duration="1000"></span>
-                          </header>
+                            <span class="c-timeline__line"></span>
+                        </header>
                     </div>
                     <div class="col-md-5 col-sm-12 res_col_top">
-                        <div class="c-timeline" data-aos="fade-down-left" data-aos-easing="linear" data-aos-duration="500">
+                        <div class="c-timeline" data-aos="fade-left" data-aos-easing="linear" data-aos-duration="500">
                             <ul class="c-timeline__list">
                               <li class="c-timeline__item tmln_mdfy">
                                 <div class="row">
