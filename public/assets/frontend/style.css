@@ -1455,6 +1455,19 @@ p.form-messege {font-size: 20px;margin: 0;}
 .abt_mdl_dlg{
     max-width: 40% !important;
 }
+.professor-slider .owl-dots{
+    position: absolute;
+    bottom: 50%;
+    right: 0;
+    transform: rotate(90deg);
+}
+.owl-theme .owl-dots .owl-dot span{
+    width: 16px !important;
+    height: 5px !important;
 
+}
+.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+    background: #e88506 !important;
+}
 /* Experment */
 

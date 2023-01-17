@@ -96,6 +96,9 @@ ul.gallery-menu li{margin-left: 0;}
 .embed-responsive iframe {
     height: 150px;
 }
+.owl-theme .owl-nav.disabled+.owl-dots{
+    display: none;
+}
 .rese-bg-image img{
     height: 115px;
 }

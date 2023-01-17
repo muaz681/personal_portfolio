@@ -60,7 +60,7 @@
                 <div class="color-gr">
                     <div class="container">
                         <div class="row">
-                            <div class="slide-content col-lg-6 col-md-6 col-xs-12">
+                            <div class="slide-content col-lg-12 col-md-12 col-xs-12">
                                 <h1>{{ $banner->banner_description }}</h1>
                                 <p>
                                     Chairman, Department of Computer Science & Engineering
@@ -71,7 +71,7 @@
 
                                     </p>
                             </div>
-                            <div class="col-md-6 col-lg-6">
+                            {{-- <div class="col-md-6 col-lg-6">
                                 <div class="follow_me">
                                     @if(general_setting('app_fb'))
                                     <div class="contact_lc my-2">
@@ -95,7 +95,7 @@
                                     </div>
                                     @endif
                                 </div>
-                            </div>
+                            </div> --}}
                         </div>
                     </div>
 

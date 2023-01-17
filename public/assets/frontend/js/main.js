@@ -28,7 +28,7 @@
 		// autoHeight:true,
         autoplay:true,
         autoplayTimeout:8000,
-		dots:false,
+		dots:true,
         loop:true,
 	});
 
