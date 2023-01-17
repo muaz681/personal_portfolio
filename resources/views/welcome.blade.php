@@ -468,7 +468,7 @@
                                     <div class="col-md-4">
                                         <div class="row">
                                             @foreach($gallerys as $key => $spc)
-                                            @if($key == 2 )
+                                            @if($key == 3 )
                                             <div class="col-md-12 py-1">
                                                 <div class="grid-item">
                                                     <div class="gallery-single" data-aos="flip-left" data-aos-easing="linear" data-aos-duration="500">
@@ -991,7 +991,7 @@
                         <div class="row">
                             <!-- Section Title Left -->
                             <div class="col-md-12">
-                                <h2 class="res-h2">
+                                <h2 class="res-h2 ftr_res_h2">
                                     <span class="res-span">Connect</span> With Me
                                 </h2>
                             </div>

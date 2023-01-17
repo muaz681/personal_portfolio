@@ -268,9 +268,12 @@
     line-height: 81px;
     /* identical to box height */
     color: #F48C06;
-    text-align: left;
+    text-align: center;
     text-transform: capitalize;
-    margin-left: 42px;
+}
+.ftr_res_h2{
+    text-align: left !important;
+    margin-left: 32px;
 }
 .res-span{
     color: #000;

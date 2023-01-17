@@ -8,9 +8,11 @@ use App\Models\ApplicationSetting;
 use App\Models\Home;
 use App\Models\Banner;
 use App\Models\Schedule;
+use App\Models\Research;
 use App\Models\Gallery;
 use App\Models\Video;
 use App\Models\Apply;
+use App\Models\Seminar;
 
 class ApiController extends Controller
 {
@@ -67,6 +69,34 @@ class ApiController extends Controller
 
             'success' => 200,
             'data' => $getSchedule,
+
+        ]);
+
+    }
+
+    // getResearch
+    public function getResearch(){
+
+        $getResearch = Research::all();
+
+        return response()->json([
+
+            'success' => 200,
+            'data' => $getResearch,
+
+        ]);
+
+    }
+
+    // getSeminar
+    public function getSeminar(){
+
+        $getSeminar = Seminar::all();
+
+        return response()->json([
+
+            'success' => 200,
+            'data' => $getSeminar,
 
         ]);
 
