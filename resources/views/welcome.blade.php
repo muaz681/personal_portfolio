@@ -124,7 +124,7 @@
                             <span class="subtitle">Hello There</span>
                             <h2 class="title">I AM {{ home_content('about_name') }}</h2>
                             <h5 class="content-title">Knowledge is the main factor for beign a Human</h5>
-                            <p>{!! home_content('about_description') !!}</p>
+                            <p class="abt_txt_lmt">{!! home_content('about_description') !!}</p>
                             <div class="see_more_btn">
                                 <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#abouModal">See More</button>
                             </div>
@@ -1121,7 +1121,7 @@
         <!-- Footer Top Arae End -->
         <!-- Footer Bottom Area Start -->
         <div class="footer-bottom">
-            <p>&copy; 2022 <b class="text-white">All</b> Right reserved by  <i class="fa fa-heart text-danger"></i> by <b>Sadiq Iqbal</b></p>
+            <p>&copy; 2023 <b class="text-white">All</b> Right reserved <i class="zmdi zmdi-favorite"></i> by <b>Prof. Sadiq Iqbal</b></p>
         </div>
         <!-- Footer Bottom Area End -->
     </footer>

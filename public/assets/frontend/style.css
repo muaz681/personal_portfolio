@@ -896,7 +896,7 @@ ul.gallery-menu li.active,ul.gallery-menu li:hover{
 }
 /* Footer Bottom */
 .footer-bottom {
-  border-top: 1px solid #555;
+  /* border-top: 1px solid #555; */
   padding: 15px 0;
   text-align: center;
 }
@@ -959,6 +959,15 @@ ul.gallery-menu li.active,ul.gallery-menu li:hover{
 }
 .professor-about p {
   color: #000;
+}
+.abt_txt_lmt{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 10;
+    line-clamp: 10;
+    -webkit-box-orient: vertical;
+    text-align: justify;
 }
 /* ============= 15. News Page ============= */
 .news-page-area .edu-news-single {
@@ -1469,5 +1478,6 @@ p.form-messege {font-size: 20px;margin: 0;}
 .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
     background: #e88506 !important;
 }
+
 /* Experment */
 
