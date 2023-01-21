@@ -17,9 +17,11 @@
   vertical-align: middle;
 }
 .slide-content {
-  margin-bottom: 270px;
-  margin-top: 270px;
-  z-index: 9;
+    margin-bottom: 0px;
+    z-index: 9;
+    position: absolute;
+    bottom: 50%;
+    transform: translateY(50%);
 }
 .slide-content h1 {
   animation-delay: 0.8s;

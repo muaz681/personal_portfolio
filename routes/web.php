@@ -28,7 +28,6 @@ use App\Http\Controllers\AchiveController;
 //     return view('welcome');
 // });
 
-
 Route::get('send_mail', function () {
 
     // $details = [
@@ -61,7 +60,7 @@ Route::match(['get', 'post'], 'register', function(){
 	return redirect('/login');
 });
 
-Auth::routes();
+Auth::routes(['register' => false]);
 
 
 

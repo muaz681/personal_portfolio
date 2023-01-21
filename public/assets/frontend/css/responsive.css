@@ -2,7 +2,7 @@
 
 /* Normal desktop :992px. */
 @media (min-width: 992px) and (max-width: 1200px) {
-.slide-content {margin-bottom: 260px;margin-top: 260px;}
+/* .slide-content {margin-bottom: 260px;margin-top: 260px;} */
 .department-text h4 {font-size: 18px;}
 .event-single-content h5 {font-size: 16px;}
 .address-area.address,.address-area.post {padding-left: 0;}
@@ -13,7 +13,10 @@
   display: flex;
   align-items: center;
 }
-
+.main-menu {display: none;}
+.about-image{
+    width: auto;
+}
 }
 
 
@@ -21,6 +24,10 @@
 @media (min-width: 768px) and (max-width: 991px) {
 .slide-content p {padding-left: 40px;padding-right: 40px;}
 .main-menu nav ul li a {padding: 40px 12px;}
+.main-menu {display: none;}
+.about-image{
+    width: auto;
+}
 .choose-single.text-center {margin-bottom: 30px;padding: 0 25px;}
 .choose-us-area {padding-bottom: 80px;}
 .department-text h4 {font-size: 18px;}
@@ -47,7 +54,7 @@ ul.gallery-menu li{margin-left: 0;}
   font-size: 32px;
 }
 .professor-slider .slider-item {
-  height: 500px;
+  /* height: 500px; */
   display: flex;
   align-items: center;
 }
@@ -84,7 +91,7 @@ ul.gallery-menu li{margin-left: 0;}
 .main-menu {display: none;}
 .header-left {margin-bottom: 10px;text-align: center;}
 .header-right {float: none;text-align: center;}
-.slide-content {margin-bottom: 0px;margin-top: 110px;}
+/* .slide-content {margin-bottom: 0px;margin-top: 110px;} */
 .menu-area-main{background: #000000b3;}
 .logo-area {
     margin-bottom: 0px;
@@ -195,7 +202,7 @@ ul.gallery-menu li {padding: 8px 12px;margin-left:0;}
   justify-content: center;
 }
 .professor-slider .slider-item {
-  /* height: 500px; */
+    height: 50vh;
   display: flex;
   align-items: center;
 }
@@ -203,9 +210,7 @@ ul.gallery-menu li {padding: 8px 12px;margin-left:0;}
     height: 50vh;
     width: 100%;
 }
-.professor-slider .slider-item{
-    height: 50vh;
-}
+
 .professor-slider .slide-content {
   text-align: left;
   max-width: 470px;

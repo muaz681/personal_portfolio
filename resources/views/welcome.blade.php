@@ -113,13 +113,13 @@
                 <div class="row align-items-center">
                     {{-- data-aos="fade-up" data-aos-easing="linear" data-aos-duration="500"
                     data-aos="fade-down" data-aos-easing="linear" data-aos-duration="500" --}}
-                    <div class="col-md-7 col-12">
+                    <div class="col-lg-7 col-md-7 col-12">
                         <div class="about-image">
                             <img class="img-fluid" src="{{ url( asset(home_content('about_img'))) }}" alt="About Image">
                         </div>
                     </div>
 
-                    <div class="col-md-5 col-12">
+                    <div class="col-lg-5 col-md-5 col-12">
                         <div class="about-content">
                             <span class="subtitle">Hello There</span>
                             <h2 class="title">I AM {{ home_content('about_name') }}</h2>
@@ -160,8 +160,7 @@
                     {{-- {{ $researches }} --}}
                     @foreach($researches as $key => $research)
                     @if($key == 0 || $key <= 3)
-
-                    <div class="col-md-3 py-1 col-sm-12">
+                    <div class="col-md-6 col-lg-3 py-1 col-sm-12">
                         <div class="rese-bg-image" data-aos="flip-left" data-aos-easing="linear" data-aos-duration="500" style="position: relative; cursor: pointer;" data-bs-toggle="modal" data-bs-target="#example{{ $research->id }}">
                             <img src="{{ asset($research->photo) }}" class="img-fluid" />
                             <div class="mask text-light d-flex flex-column text-center">
@@ -1101,15 +1100,15 @@
                                 @csrf
                                 <div class="mb-3">
                                   <label for="name" class="form-label">Name</label>
-                                  <input type="text" name="name" class="form-control" id="name">
+                                  <input type="text" name="name" class="form-control" required id="name">
                                 </div>
                                 <div class="mb-3">
                                   <label for="exampleInputEmail1" class="form-label">Email address</label>
-                                  <input type="email" class="form-control" name="email" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                  <input type="email" class="form-control" name="email" id="exampleInputEmail1" required aria-describedby="emailHelp">
                                 </div>
                                 <div class="mb-3">
                                   <label for="exampleFormControlTextarea1" class="form-label">Message</label>
-                                  <textarea class="form-control" name="msg" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                  <textarea class="form-control" name="msg" id="exampleFormControlTextarea1" required rows="3"></textarea>
                                 </div>
                                 <button type="submit" class="btn btn-warning">Submit</button>
                             </form>
