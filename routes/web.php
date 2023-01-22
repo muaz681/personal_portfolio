@@ -13,6 +13,7 @@ use App\Http\Controllers\ApplyController;
 use App\Http\Controllers\ResearchController;
 use App\Http\Controllers\SeminarController;
 use App\Http\Controllers\AchiveController;
+use App\Http\Controllers\ItemController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,7 +28,8 @@ use App\Http\Controllers\AchiveController;
 // Route::get('/', function () {
 //     return view('welcome');
 // });
-
+Route::get('/pdfview/{id}', [ItemController::class, 'pdfview'])->name('pdfview');
+// Route::get('/pdfview/{id}', [ItemController::class, 'pdfview']);
 Route::get('send_mail', function () {
 
     // $details = [
