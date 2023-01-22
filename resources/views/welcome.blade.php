@@ -113,13 +113,13 @@
                 <div class="row align-items-center">
                     {{-- data-aos="fade-up" data-aos-easing="linear" data-aos-duration="500"
                     data-aos="fade-down" data-aos-easing="linear" data-aos-duration="500" --}}
-                    <div class="col-lg-7 col-md-7 col-12">
+                    <div class="col-lg-6 col-md-7 col-12">
                         <div class="about-image">
                             <img class="img-fluid" src="{{ url( asset(home_content('about_img'))) }}" alt="About Image">
                         </div>
                     </div>
 
-                    <div class="col-lg-5 col-md-5 col-12">
+                    <div class="col-lg-6 col-md-5 col-12">
                         <div class="about-content">
                             <span class="subtitle">Hello There</span>
                             <h2 class="title">I AM {{ home_content('about_name') }}</h2>

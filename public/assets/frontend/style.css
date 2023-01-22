@@ -594,7 +594,7 @@
 }
 .about-image{
     width: 559px;
-    height: 580px;
+    height: 500px;
     background: #F48C06;
     border-radius: 5px;
     position: relative;
@@ -930,7 +930,7 @@ ul.gallery-menu li.active,ul.gallery-menu li:hover{
 
 
 .professor-about .about-content {
-  max-width: 410px;
+  /* max-width: 410px; */
   display: flex;
   flex-direction: column;
 }
