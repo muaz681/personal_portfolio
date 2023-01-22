@@ -39,15 +39,16 @@
                                 </div>
                                 <div class="modal-footer-resc">
                                     <div class="row">
-                                        <div class="col-md-6">
-                                            <a href="{{ route('pdfview',['download'=>'pdf']) }}">Download PDF</a>
-                                            <a href="{{ $research->url }}" target="_blank" class="btn btn-outline-primary">
-                                                Research Link
-                                            </a>
+                                        <div class="col-md-8 col-8">
+                                            <div class="flex">
+                                                <a class="btn btn-primary res_pdf_rs" href="{{ route('pdfview', $research->id )}}">Export to PDF</a>
+                                                <a href="{{ $research->url }}" target="_blank" class="btn btn-outline-primary res_pdf_rs">
+                                                    Research Link
+                                                </a>
+                                            </div>
                                         </div>
-                                        <div class="col-md-6 text-right">
-
-                                            <button type="button" class="btn btn-secondary mdl_ft_btn" data-bs-dismiss="modal">Close</button>
+                                        <div class="col-md-4 col-4 text-right">
+                                            <button type="button" class="btn btn-secondary mdl_ft_btn res_pdf_rs" data-bs-dismiss="modal">Close</button>
                                         </div>
                                     </div>
 

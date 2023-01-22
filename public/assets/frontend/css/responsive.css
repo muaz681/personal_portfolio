@@ -28,6 +28,7 @@
 .about-image{
     width: auto;
 }
+
 .choose-single.text-center {margin-bottom: 30px;padding: 0 25px;}
 .choose-us-area {padding-bottom: 80px;}
 .department-text h4 {font-size: 18px;}
@@ -99,6 +100,10 @@ ul.gallery-menu li{margin-left: 0;}
 }
 .gallery-single img{
     height: 150px !important;
+}
+.res_pdf_rs{
+    font-size: 8px;
+    padding: 4px;
 }
 .embed-responsive iframe {
     height: 150px;
