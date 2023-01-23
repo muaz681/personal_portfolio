@@ -245,7 +245,7 @@
         </section>
         <section class="upcoming-event-section">
             <div class="container">
-                <div class="row py-2">
+                <div class="row">
                     <!-- Section Title Left -->
                     <!-- Event Single Content Start -->
                     <div class="col-lg-6">
@@ -313,7 +313,7 @@
                                             <div class="col-lg-12">
 
                                                 @if($schedules->count())
-                                                <div class="see_more_btn mt-4">
+                                                <div class="see_more_btn my-3">
                                                     <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#exampleModal">
                                                         All Shedule
                                                     </button>
