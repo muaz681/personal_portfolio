@@ -28,6 +28,7 @@
 		// autoHeight:true,
         autoplay:true,
         autoplayTimeout:8000,
+        animateOut: 'fadeOut',
 		dots:true,
         loop:true,
 	});

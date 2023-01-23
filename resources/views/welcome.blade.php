@@ -26,7 +26,7 @@
                                     <li class="active">
                                         <a href="{{ route('home') }}">Home</a>
                                     </li>
-                                    <li><a href="#about_part">ABOUT US</a></li>
+                                    <li><a href="#about_part">ABOUT ME</a></li>
                                     <li><a href="#Research_part">Research</a>
                                     </li>
                                     <li><a href="#Shedule_part">Shedule</a>
@@ -110,23 +110,30 @@
         <!-- About Us Area Start -->
         <section class="professor-about ptb-110" id="about_part">
             <div class="container">
-                <div class="row align-items-center">
+                <div class="row">
                     {{-- data-aos="fade-up" data-aos-easing="linear" data-aos-duration="500"
                     data-aos="fade-down" data-aos-easing="linear" data-aos-duration="500" --}}
                     <div class="col-lg-6 col-md-7 col-12">
                         <div class="about-image">
+                            <div class="abt_crcle"></div>
                             <img class="img-fluid" src="{{ url( asset(home_content('about_img'))) }}" alt="About Image">
                         </div>
                     </div>
 
                     <div class="col-lg-6 col-md-5 col-12">
                         <div class="about-content">
-                            <span class="subtitle">Hello There</span>
+                            {{-- <span class="subtitle">Hello There</span>
                             <h2 class="title">I AM {{ home_content('about_name') }}</h2>
-                            <h5 class="content-title">Knowledge is the main factor for beign a Human</h5>
+                            <h5 class="content-title">Knowledge is the main factor for beign a Human</h5> --}}
+                            <h2 class="res-h2">
+                                About <span class="res-span"> Me</span>
+                            </h2>
+                            <p class="abt_txt_lmt">
+                                Hello There, I Am Prof. Sadiq Iqbal. I would like to extend my warmest welcome to you as the Head to the Department of Computer Science and Engineering at the Bangladesh University. Computing has revolutionized our world as we know it in the past two decades and will continue to serve as the core of all technologies in the 21st century. To prepare the future leaders for these innovations.
+                            </p>
                             <p class="abt_txt_lmt">{!! home_content('about_description') !!}</p>
                             <div class="see_more_btn">
-                                <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#abouModal">See More</button>
+                                <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#abouModal">Know More</button>
                             </div>
                             <div class="modal fade" id="abouModal" tabindex="-1" aria-labelledby="aboutModalLabel" aria-hidden="true">
                                 <div class="modal-dialog abt_mdl_dlg modal-dialog-scrollable">
@@ -911,7 +918,7 @@
         <section class="edu-news-area ptb-110">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-4">
+                    <div class="col-md-3">
                         <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
                             @foreach($seminars as $key => $seminar)
                             @if($key == 0)
@@ -935,7 +942,7 @@
                             @endforeach
                         </div>
                     </div>
-                    <div class="col-md-8">
+                    <div class="col-md-9">
                         <div class="tab-content" id="v-pills-tabContent">
                             @foreach($seminars as $key => $seminar)
                             @if($key == 0)
@@ -1032,54 +1039,6 @@
                                 </div>
                             </div>
                             @endif
-                            @if( general_setting('app_instagram') )
-                            <div class="col-md-12 py-2">
-                                <div class="row">
-                                    <div class="col-md-2 col-2">
-                                        <div class="contact_ic">
-                                            <i class="zmdi zmdi-linkedin"></i>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-10 col-10">
-                                        <div class="contact_text">
-                                            <a href="{{ general_setting('app_instagram') }}" target="_blank">@sadiq_iqbal</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            @endif
-                            @if( general_setting('app_youtube') )
-                            <div class="col-md-12 py-2">
-                                <div class="row">
-                                    <div class="col-md-2 col-2">
-                                        <div class="contact_ic">
-                                            <i class="zmdi zmdi-facebook"></i>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-10 col-10">
-                                        <div class="contact_text">
-                                            <a href="{{ general_setting('app_youtube') }}" target="_blank">@sadiq_iqbal</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            @endif
-                            @if( general_setting('app_fb') )
-                            <div class="col-md-12 py-2">
-                                <div class="row">
-                                    <div class="col-md-2 col-2">
-                                        <div class="contact_ic">
-                                            <i class="zmdi zmdi-twitter"></i>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-10 col-10">
-                                        <div class="contact_text">
-                                            <a href="{{ general_setting('app_fb') }}" target="_blank">@sadiq_iqbal</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            @endif
                             @if( general_setting('app_address') )
                             <div class="col-md-12 py-2">
                                 <div class="row">
@@ -1124,7 +1083,24 @@
         <!-- Footer Top Arae End -->
         <!-- Footer Bottom Area Start -->
         <div class="footer-bottom">
-            <p>&copy; 2023 <b class="text-white">All</b> Right reserved <i class="zmdi zmdi-favorite"></i> by <b>Prof. Sadiq Iqbal</b></p>
+            <p> Copyright &copy; 2023 <br> All Right reserved <i class="zmdi zmdi-favorite"></i> by <b>Prof. Sadiq Iqbal</b></p>
+        </div>
+        <div class="footer-bottom" style="border-top: 1px solid #f6f6f682;">
+            <a href="{{ general_setting('app_instagram') }}">
+                <div class="contact_ic ft_contact_ic">
+                    <i class="zmdi zmdi-linkedin"></i>
+                </div>
+            </a>
+            <a href="{{ general_setting('app_youtube') }}">
+                <div class="contact_ic fb_ct_ic">
+                    <i class="zmdi zmdi-facebook"></i>
+                </div>
+            </a>
+            <a href="{{ general_setting('app_fb') }}">
+                <div class="contact_ic ft_contact_ic">
+                    <i class="zmdi zmdi-twitter"></i>
+                </div>
+            </a>
         </div>
         <!-- Footer Bottom Area End -->
     </footer>

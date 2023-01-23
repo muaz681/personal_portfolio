@@ -62,13 +62,14 @@
 }
 
 /* Slider Animation Css */
-.slide-content *{
+/* .slide-content *{
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
   -webkit-animation-fill-mode: backwards ;
   animation-fill-mode: backwards ;
   -webkit-animation-name: fadeOutDown;
-  animation-name: fadeOutDown; }
+  animation-name: fadeOutDown;
+}
 .active .slide-content h1{
   -webkit-animation-name: lightSpeedIn;
   animation-name: lightSpeedIn;
@@ -80,7 +81,7 @@
 .active .slide-content .slide-btn a {
   -webkit-animation-name: fadeInLeft;
   animation-name: fadeInLeft;
-}
+} */
 /* Professor Slider Section Start */
 
 .professor-slider .slide-content .subtitle {
@@ -126,6 +127,6 @@
     height: 80vh;
     width: 100%;
     position: relative;
-    background: rgb(2,2,5);
-    background: linear-gradient(90deg, rgba(2,2,5,0.9248949579831933) 0%, rgba(4,3,3,0.8352591036414566) 60%, rgba(66,67,68,0.46271008403361347) 100%);
+    /* background: linear-gradient(90deg, rgb(2 2 5) 0%, rgb(4 3 3 / 76%) 43%, rgba(66,67,68,0.46271008403361347) 100%); */
+    background: linear-gradient(99.4deg, rgba(32, 32, 32, 0.8648) 28.8%, rgba(68, 64, 129, 0) 103.59%, rgba(61, 59, 87, 0.2944) 103.59%);
 }
