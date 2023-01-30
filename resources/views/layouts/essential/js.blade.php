@@ -10,7 +10,7 @@
             AOS.init({
                 once: true,
                 disable: function() {
-                    var maxWidth = 300;
+                    var maxWidth = 700;
                     return window.innerWidth < maxWidth;
                 }
             });

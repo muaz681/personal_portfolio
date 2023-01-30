@@ -113,14 +113,14 @@
                 <div class="row">
                     {{-- data-aos="fade-up" data-aos-easing="linear" data-aos-duration="500"
                     data-aos="fade-down" data-aos-easing="linear" data-aos-duration="500" --}}
-                    <div class="col-lg-6 col-md-7 col-12">
+                    <div class="col-lg-6 col-md-7 col-sm-12">
                         <div class="about-image">
                             <div class="abt_crcle"></div>
                             <img class="img-fluid" src="{{ url( asset(home_content('about_img'))) }}" alt="About Image">
                         </div>
                     </div>
 
-                    <div class="col-lg-6 col-md-5 col-12">
+                    <div class="col-lg-6 col-md-5 col-sm-12">
                         <div class="about-content">
                             {{-- <span class="subtitle">Hello There</span>
                             <h2 class="title">I AM {{ home_content('about_name') }}</h2>

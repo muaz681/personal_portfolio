@@ -95,8 +95,8 @@ ul.gallery-menu li{margin-left: 0;}
 /* .slide-content {margin-bottom: 0px;margin-top: 110px;} */
 .menu-area-main{background: #000000b3;}
 .logo-area {
-    margin-bottom: 0px;
-    margin-top: 0px !important;
+    margin-bottom: 5px;
+    margin-top: 5px !important;
 }
 .gallery-single img{
     height: 150px !important;
@@ -129,7 +129,7 @@ ul.gallery-menu li{margin-left: 0;}
     line-height: 16px;
 }
 .logo-area img {
-    width: 50%;
+    width: 25%;
 }
 .follow_me{
     display: none;
@@ -450,6 +450,9 @@ ul.gallery-menu li {padding: 8px 12px;margin-left:0;}
 .seminar_des{
     padding-top: 0px;
 }
+.abt_crcle{
+    display: none;
+}
 }
 
 /* Large Mobile :480px. */
@@ -457,7 +460,6 @@ ul.gallery-menu li {padding: 8px 12px;margin-left:0;}
 .container {width:450px}
 .gallery-box .grid-item {width: 50%;}
 .slide-content h1 {font-size: 42px;}
-.logo-area {text-align: center;}
 .edu-news-img > img {width: 100%;}
 
 }
