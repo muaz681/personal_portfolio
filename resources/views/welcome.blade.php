@@ -248,7 +248,7 @@
                 <div class="row">
                     <!-- Section Title Left -->
                     <!-- Event Single Content Start -->
-                    <div class="col-lg-6">
+                    <div class="col-lg-6 col-sm-12">
                         <div class="tab-content upcom-tab-content">
 
                             <div class="about-content" data-aos="zoom-in" data-aos-easing="linear" data-aos-duration="500">
@@ -263,7 +263,7 @@
                     </div>
                     <!-- Event Single Content End -->
                     <!-- Event Tab Top Menu Start -->
-                    <div class="col-lg-6">
+                    <div class="col-lg-6 col-sm-12">
                         {{-- {{ $schedules }} --}}
                         <div class="row">
                             <div class="col-lg-12">
@@ -413,20 +413,7 @@
                     <div class="col-lg-12">
                         <div class="tab-content" id="pills-tabContent">
                             <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
-                                {{-- <div class="row video-ger">
-                                    @foreach($gallerys as $key => $spc)
-                                    @if($key == 0 || $key <= 5 )
-                                    <div class="col-md-4 py-1">
-                                        <div class="grid-item">
-                                            <div class="gallery-single" data-aos="flip-left" data-aos-easing="linear" data-aos-duration="500">
-                                                <img src="{{ asset($spc->photo) }}" alt="" />
-                                                <a href="{{ asset($spc->photo) }}" class="popup-gallery"><i class="zmdi zmdi-filter-center-focus"></i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    @endif
-                                    @endforeach
-                                </div> --}}
+
                                 {{-- Experiment --}}
                                 <div class="row video-ger">
                                     <div class="col-md-4">
@@ -497,38 +484,11 @@
                                     <div class="col-md-12">
                                         @if($gallerys)
                                         <div class="see_more_btn text-center mt-4">
-                                            <button type="button" class="btn btn-outline-warning" data-bs-toggle="modal" data-bs-target="#exampleGallery">
+                                            <a href="{{ route('gallery_page') }}" class="btn btn-outline-warning">
                                                 See More
-                                            </button>
+                                            </a>
                                         </div>
                                         @endif
-                                        <div class="modal fade" id="exampleGallery" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                            <div class="modal-dialog modal-dialog-scrollable">
-                                                <div class="modal-content">
-                                                    <div class="modal-header mdl_hdr_md">
-                                                      <h1 class="modal-title fs-5" id="exampleModalScrollableTitle">Gallery</h1>
-                                                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                                    </div>
-                                                    <div class="modal-body">
-                                                        <div class="row video-ger">
-                                                            @foreach($gallerys as $spc)
-                                                            <div class="col-md-4 py-1">
-                                                                <div class="grid-item">
-                                                                    <div class="gallery-single" data-aos="flip-left" data-aos-easing="linear" data-aos-duration="500">
-                                                                        <img src="{{ asset($spc->photo) }}" alt="" />
-                                                                        <a href="{{ asset($spc->photo) }}" class="popup-gallery"><i class="zmdi zmdi-filter-center-focus"></i></a>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            @endforeach
-                                                        </div>
-                                                    </div>
-                                                    <div class="modal-footer">
-                                                      <button type="button" class="btn btn-secondary mdl_ft_btn" data-bs-dismiss="modal">Close</button>
-                                                    </div>
-                                                  </div>
-                                            </div>
-                                        </div>
                                     </div>
                                 </div>
                             </div>

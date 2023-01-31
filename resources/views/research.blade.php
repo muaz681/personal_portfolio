@@ -9,7 +9,17 @@
                     </h2>
                 </div>
             </div>
-            <div class="row pt-5 rese-row">
+            <div class="row">
+                <div class="col-md-12">
+                    <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item brd_cl"><a href="{{ route('home') }}">Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Research</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+            <div class="row pt-4 rese-row">
                 {{-- {{ $researches }} --}}
                 @foreach($researches as $research)
                 <div class="col-md-3 py-1 col-sm-12">

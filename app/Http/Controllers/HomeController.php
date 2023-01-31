@@ -45,4 +45,8 @@ class HomeController extends Controller
         $researches = Research::all();
         return view('research', compact('researches'));
     }
+    public function gallery_page(){
+        $gallerys = Gallery::all();
+        return view('gallery', compact('gallerys'));
+    }
 }

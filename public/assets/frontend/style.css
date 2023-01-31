@@ -107,6 +107,17 @@
   background: #F48C06 none repeat scroll 0 0 !important;
   color: #fff !important;
 }
+.brd_cl a{
+    color: #f48c06 !important;
+}
+.breadcrumb-item{
+    font-size: 20px;
+    font-weight: 600;
+}
+.photo-ger{
+    --bs-gutter-x: 16px !important;
+    --bs-gutter-y: 10px !important;
+}
 .events-tab-top .nav-tabs .nav-link {
     margin-bottom: 0;
     background: #F6F6F6 none repeat scroll 0 0;

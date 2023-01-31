@@ -61,6 +61,7 @@ ul.gallery-menu li{margin-left: 0;}
 }
 .professor-slider .slide-content {
   max-width: 450px;
+  bottom: 31%;
 }
 .professor-slider .slide-content .subtitle {
   font-size: 16px;
@@ -221,6 +222,7 @@ ul.gallery-menu li {padding: 8px 12px;margin-left:0;}
   max-width: 470px;
   margin-left: 0;
   margin-right: auto;
+  bottom: 31%;
 }
 .professor-slider .slide-content .subtitle {
   font-size: 18px;
@@ -422,6 +424,7 @@ ul.gallery-menu li {padding: 8px 12px;margin-left:0;}
     padding-right: 8px;
     padding-top: 0px;
     line-height: 16px;
+    height: unset;
 }
 .tab-content{
     padding-top: 14px;
@@ -431,6 +434,7 @@ ul.gallery-menu li {padding: 8px 12px;margin-left:0;}
 }
 .event-post-no{
     font-size: 9px;
+    margin-top: unset;
 }
 .evnet-post-time {
     font-size: 9px;
